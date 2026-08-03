@@ -1,0 +1,21 @@
+{
+  "frames": 76,
+  "source_clock": [
+    445,
+    520
+  ],
+  "layers": {
+    "gross_hitting_arm": "MediaPipe Pose landmarks 11/13/15; accepted gross 2D arm only",
+    "racket_silhouette": "SAM 2.1 Tiny; accepted source-camera silhouette only",
+    "ball_center": "CoTracker3 Offline; accepted prompted 2D center track"
+  },
+  "racket_overlay_nonempty_frames": 76,
+  "limitations": [
+    "not measured physical impact",
+    "not racket SE(3)",
+    "not face normal",
+    "not grip",
+    "not 3D ball",
+    "not spin"
+  ]
+}

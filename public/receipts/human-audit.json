@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "clip_id": "uHCNOdZv5os",
+  "source_window": [445, 520],
+  "frames_reviewed": 76,
+  "review_method": "All 76 numbered frames inspected on three sequential contact sheets; overlap region inspected frame by frame.",
+  "cotracker3": {
+    "ball": {
+      "verdict": "PASS_PROMPTED_2D_BALL_CENTER",
+      "visual_result": "The prompted point remains on the fluorescent ball until exit, remains on the ball during the racket overlap, and produces no post-exit false point.",
+      "accepted_frames": [445, 498],
+      "missing_verified_frames": [499, 500, 501]
+    },
+    "racket": {
+      "verdict": "PASS_PROMPTED_2D_RACKET_POINTS_ONLY",
+      "visual_result": "Visible points remain attached to physical racket regions; no point transfers to the hand, body, court, or ball. Individual points become invisible as the corresponding racket region exits frame.",
+      "limitations": ["not silhouette", "not rigid SE(3)", "not face normal", "not grip"]
+    }
+  },
+  "sam2_1_tiny": {
+    "ball": {
+      "verdict": "REJECTED_FOR_BALL_CENTER",
+      "visual_result": "The mask follows the ball but is systematically broader than the visible ball, remains one frame after verified exit, and misses the pre-registered center-error gate."
+    },
+    "racket": {
+      "verdict": "PASS_2D_RACKET_SILHOUETTE",
+      "visual_result": "The mask remains on the physical racket for 76/76 frames, follows the head and handle through the fast overlap, shows no transfer, and clips honestly when the racket leaves frame.",
+      "limitations": ["not metric pose", "not racket face orientation", "not string plane", "not grip"]
+    }
+  },
+  "combined": {
+    "verdict": "PASS_COMBINED_SOURCE_CAMERA_2D_EVIDENCE",
+    "layers": ["MediaPipe hitting-arm landmarks 11/13/15", "SAM 2.1 racket silhouette", "CoTracker3 ball center"],
+    "limitations": ["not measured physical contact", "not 3D", "not spin", "not force", "not reusable animation"]
+  }
+}

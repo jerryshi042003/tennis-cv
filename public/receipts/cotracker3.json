@@ -1,0 +1,31 @@
+{
+  "route": "official-cotracker3-offline",
+  "device": "cpu",
+  "frames": 76,
+  "repo_commit": "82e02e8029753ad4ef13cf06be7f4fc5facdda4d",
+  "checkpoint_sha256": "bcf913f208fc741fb5a481c7e6e8eaecd0cf4678e6ab0534166cc5f1d985e8c1",
+  "load_seconds": 0.1336314170039259,
+  "inference_seconds": 29.750547249997908,
+  "ball": {
+    "visible_source_frames": 57,
+    "predicted_visible_frames": 54,
+    "coverage": 0.9473684210526315,
+    "median_error_px": 0.9929048588275625,
+    "p90_error_px": 2.6785816441299555,
+    "max_error_px": 3.610862094190673,
+    "closest_overlap_visible": true,
+    "closest_overlap_error_px": 1.8652605810921006,
+    "false_visible_after_exit": []
+  },
+  "racket": {
+    "per_point_visible_frames": [
+      64,
+      75,
+      76,
+      70,
+      62
+    ],
+    "all_five_visible_frames": 54
+  },
+  "video": "/media/raw-cotracker3.mp4"
+}

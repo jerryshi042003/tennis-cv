@@ -1,0 +1,28 @@
+{
+  "route": "official-sam2.1-tiny-video-predictor",
+  "device": "cpu",
+  "frames": 76,
+  "repo_commit": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+  "checkpoint_sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+  "load_seconds": 0.20481487500364892,
+  "ball_inference_seconds": 56.0060317499956,
+  "racket_forward_and_backward_seconds": 55.40982924999844,
+  "ball": {
+    "visible_source_frames": 57,
+    "predicted_visible_frames": 57,
+    "coverage": 1.0,
+    "median_error_px": 6.188472213980196,
+    "p90_error_px": 7.092926848998103,
+    "max_error_px": 8.512132613201421,
+    "closest_overlap_visible": true,
+    "closest_overlap_error_px": 6.398657451180616,
+    "false_visible_after_exit": [
+      502
+    ]
+  },
+  "racket": {
+    "mask_nonempty_frames": 76,
+    "area_median_px": 2972.5,
+    "area_p90_px": 5370.0
+  }
+}
