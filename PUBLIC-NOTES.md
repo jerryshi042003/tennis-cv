@@ -12,3 +12,6 @@ grip, spin, force, or novel-view reconstruction.
 Private recordings, checkpoints, account credentials, machine-specific paths,
 and bulky intermediate artifacts are excluded. Source footage, papers, and
 model outputs remain subject to their original rights.
+
+The deployment is a static build with no runtime database, paid worker, or
+always-on service dependency; usage-limit exhaustion cannot corrupt research data.
