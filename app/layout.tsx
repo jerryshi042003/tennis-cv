@@ -13,8 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tennis Contact Evidence",
-  description: "Frame-audited ball, racket, and arm tracking on one true high-speed tennis contact clip.",
+  title: "Racket-Sports CV Research Log",
+  description: "A restrained literature review and complete experiment ledger for tennis and table-tennis computer vision.",
+  openGraph: {
+    title: "Racket-Sports CV Research Log",
+    description: "70 experiments: evidence, failures, and the next input.",
+    images: ["/og-research-log.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Racket-Sports CV Research Log",
+    description: "70 experiments: evidence, failures, and the next input.",
+    images: ["/og-research-log.png"],
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

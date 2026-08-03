@@ -1,17 +1,14 @@
-# Tennis CV public release
+# Public release boundary
 
-**Live evidence:** https://jerry-tennis-contact-evidence.jshi392999.chatgpt.site
+This release is a research index, not a single-result product page. It publishes
+the ping-pong reference demo, a non-redundant ledger of 70 distinct experiments,
+selected literature, and short evidence cuts that are useful to inspect.
 
-This site publishes one bounded result: frame-audited 2D ball-center and racket
-silhouette tracking on the same 76-frame clock. It deliberately does not claim
-3D contact, racket pose, face angle, grip, spin, force, or reusable novel-view
-animation.
+The ledger distinguishes executed evidence from literature-only candidates and
+keeps measured, inferred, authored, synthetic, failed, and corrected results
+separate. It makes no general claim of solved 3D tennis contact, racket pose,
+grip, spin, force, or novel-view reconstruction.
 
-The source window is identified in `public/receipts/human-audit.json` as public
-clip `uHCNOdZv5os`, frames 445–520. The repository ships the short rendered
-review outputs and machine-readable receipts, not model checkpoints, private
-recordings, account credentials, or the broader private experiment archive.
-
-The code is provided for inspection. Source-video and model rights remain with
-their respective owners; no blanket license is asserted over third-party media
-or model outputs.
+Private recordings, checkpoints, account credentials, machine-specific paths,
+and bulky intermediate artifacts are excluded. Source footage, papers, and
+model outputs remain subject to their original rights.

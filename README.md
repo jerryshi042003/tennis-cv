@@ -1,29 +1,28 @@
-# Tennis CV — Contact Evidence
+# Racket-Sports CV Research Log
 
-Frame-audited 2D ball and racket tracking on one real high-speed tennis clip.
+A compact literature review and experiment ledger for tennis and table-tennis
+computer vision.
 
-**Live evidence:** https://jerry-tennis-contact-evidence.jshi392999.chatgpt.site
+**Live site:** https://jerry-tennis-contact-evidence.jshi392999.chatgpt.site
 
-## Result
+The page starts with the TT3D ping-pong reconstruction because it most clearly
+shows the full evidence chain: observation, calibration, physical fitting,
+reprojection, and residual inspection. It then records 70 materially different
+attempts across body recovery, racket/ball/contact, capture geometry,
+simulation, tracking, corpus design, and metric audits.
 
-- CoTracker3 kept the prompted ball center on the visible ball through the
-  racket-overlap window: 54/57 verified frames, 0.99 px median error.
-- SAM 2.1 Tiny kept a racket silhouette attached for all 76 reviewed frames.
-- The combined overlay is source-camera 2D evidence only.
-
-This does **not** establish physical impact, 3D ball flight, spin, force, grip,
-racket SE(3), face normal, string plane, or novel-view reconstruction.
+Repeated runs and cosmetic variants are consolidated into the experiment that
+changed the decision. Every row states its question, observed result, and the
+resulting decision. Failed, blocked, corrected, authored, synthetic, inferred,
+and measured work remain visibly distinct.
 
 ## Public boundary
 
-This repo contains the small public evidence site, three review videos, and
-machine-readable receipts. It excludes checkpoints, private recordings, local
-machine paths, the broader experiment archive, and credentials.
-
-The source window is identified in `public/receipts/human-audit.json` as public
-clip `uHCNOdZv5os`, frames 445–520. Source-video and model rights remain with
-their respective owners; no blanket license is asserted over third-party media
-or model outputs.
+This repository includes the public reading interface and short evidence cuts.
+It excludes private recordings, model checkpoints, credentials, local machine
+paths, and bulky intermediate artifacts. Third-party papers, source footage,
+and model outputs retain their respective rights; inclusion here does not claim
+a blanket license.
 
 ## Verify
 
