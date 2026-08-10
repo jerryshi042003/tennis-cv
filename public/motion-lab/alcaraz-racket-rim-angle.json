@@ -1,0 +1,311 @@
+{
+  "verdict": "PARTIAL_READABLE_SNAPSHOTS__REJECT_STABLE_2D_RIM_SEQUENCE",
+  "evidence_class": "SOURCE_CAMERA_2D_RIM_AXIS_TEST",
+  "source_frames": [
+    121,
+    136
+  ],
+  "source_fps": 30,
+  "playback_fps": 8,
+  "playback_speed": 0.26666666666666666,
+  "decoded_frames": 16,
+  "unique_decoded_frames": 16,
+  "step_limit_deg": 35.0,
+  "axis_ratio_floor": 1.35,
+  "unstable_step_frames": [
+    122,
+    127,
+    133,
+    134,
+    135,
+    136
+  ],
+  "ambiguous_axis_frames": [],
+  "maximum_adjacent_undirected_step_deg": 90.0,
+  "minimum_axis_ratio": 1.4181818181818182,
+  "rows": [
+    {
+      "frame": 121,
+      "center": [
+        347.5,
+        235.0
+      ],
+      "axes": [
+        26.0,
+        39.0
+      ],
+      "opencv_angle_deg": -20.0,
+      "major_axis_deg": 70.0,
+      "axis_ratio": 1.5,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": null
+    },
+    {
+      "frame": 122,
+      "center": [
+        319.6656188964844,
+        212.33909606933594
+      ],
+      "axes": [
+        17.107744216918945,
+        30.148250579833984
+      ],
+      "opencv_angle_deg": 26.95847511291504,
+      "major_axis_deg": 116.95847511291504,
+      "axis_ratio": 1.76225750148979,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 702,
+      "adjacent_undirected_step_deg": 46.95847511291504
+    },
+    {
+      "frame": 123,
+      "center": [
+        299.6336669921875,
+        207.9408721923828
+      ],
+      "axes": [
+        16.4454288482666,
+        38.58540725708008
+      ],
+      "opencv_angle_deg": 16.953798294067383,
+      "major_axis_deg": 106.95379829406738,
+      "axis_ratio": 2.3462694474609034,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 854,
+      "adjacent_undirected_step_deg": 10.004676818847656
+    },
+    {
+      "frame": 124,
+      "center": [
+        278.99737548828125,
+        200.58917236328125
+      ],
+      "axes": [
+        17.66431427001953,
+        38.25969696044922
+      ],
+      "opencv_angle_deg": 12.245821952819824,
+      "major_axis_deg": 102.24582195281982,
+      "axis_ratio": 2.1659316277782072,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 647,
+      "adjacent_undirected_step_deg": 4.707976341247559
+    },
+    {
+      "frame": 125,
+      "center": [
+        258.036376953125,
+        197.68951416015625
+      ],
+      "axes": [
+        16.393768310546875,
+        37.24993133544922
+      ],
+      "opencv_angle_deg": 177.9309844970703,
+      "major_axis_deg": 87.93098449707031,
+      "axis_ratio": 2.2722006697803945,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 639,
+      "adjacent_undirected_step_deg": 14.314837455749512
+    },
+    {
+      "frame": 126,
+      "center": [
+        236.20770263671875,
+        203.23150634765625
+      ],
+      "axes": [
+        16.790525436401367,
+        33.86588668823242
+      ],
+      "opencv_angle_deg": 155.83543395996094,
+      "major_axis_deg": 65.83543395996094,
+      "axis_ratio": 2.016964079921655,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 531,
+      "adjacent_undirected_step_deg": 22.095550537109375
+    },
+    {
+      "frame": 127,
+      "center": [
+        200.0,
+        227.5
+      ],
+      "axes": [
+        25.0,
+        12.5
+      ],
+      "opencv_angle_deg": 20.0,
+      "major_axis_deg": 20.0,
+      "axis_ratio": 2.0,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 45.83543395996094
+    },
+    {
+      "frame": 128,
+      "center": [
+        200.0,
+        257.5
+      ],
+      "axes": [
+        20.0,
+        11.0
+      ],
+      "opencv_angle_deg": 50.0,
+      "major_axis_deg": 50.0,
+      "axis_ratio": 1.8181818181818181,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 30.0
+    },
+    {
+      "frame": 129,
+      "center": [
+        202.5,
+        295.0
+      ],
+      "axes": [
+        27.5,
+        39.0
+      ],
+      "opencv_angle_deg": -25.0,
+      "major_axis_deg": 65.0,
+      "axis_ratio": 1.4181818181818182,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 15.0
+    },
+    {
+      "frame": 130,
+      "center": [
+        244.9771270751953,
+        295.0670471191406
+      ],
+      "axes": [
+        21.790203094482422,
+        41.63447952270508
+      ],
+      "opencv_angle_deg": 177.53817749023438,
+      "major_axis_deg": 87.53817749023438,
+      "axis_ratio": 1.9106971762575036,
+      "source": "accepted_outline_fit",
+      "accepted_outline_points": 724,
+      "adjacent_undirected_step_deg": 22.538177490234375
+    },
+    {
+      "frame": 131,
+      "center": [
+        250.0,
+        245.0
+      ],
+      "axes": [
+        9.0,
+        27.5
+      ],
+      "opencv_angle_deg": 10.0,
+      "major_axis_deg": 100.0,
+      "axis_ratio": 3.0555555555555554,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 12.461822509765625
+    },
+    {
+      "frame": 132,
+      "center": [
+        267.5,
+        160.0
+      ],
+      "axes": [
+        12.5,
+        26.0
+      ],
+      "opencv_angle_deg": -25.0,
+      "major_axis_deg": 65.0,
+      "axis_ratio": 2.08,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 35.0
+    },
+    {
+      "frame": 133,
+      "center": [
+        267.5,
+        112.5
+      ],
+      "axes": [
+        30.0,
+        10.0
+      ],
+      "opencv_angle_deg": 10.0,
+      "major_axis_deg": 10.0,
+      "axis_ratio": 3.0,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 55.0
+    },
+    {
+      "frame": 134,
+      "center": [
+        327.5,
+        97.5
+      ],
+      "axes": [
+        12.5,
+        27.5
+      ],
+      "opencv_angle_deg": 10.0,
+      "major_axis_deg": 100.0,
+      "axis_ratio": 2.2,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 90.0
+    },
+    {
+      "frame": 135,
+      "center": [
+        380.0,
+        150.0
+      ],
+      "axes": [
+        30.0,
+        12.0
+      ],
+      "opencv_angle_deg": -5.0,
+      "major_axis_deg": 175.0,
+      "axis_ratio": 2.5,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 75.0
+    },
+    {
+      "frame": 136,
+      "center": [
+        377.5,
+        227.5
+      ],
+      "axes": [
+        12.5,
+        25.0
+      ],
+      "opencv_angle_deg": -10.0,
+      "major_axis_deg": 80.0,
+      "axis_ratio": 2.0,
+      "source": "human_reviewed_ellipse",
+      "accepted_outline_points": null,
+      "adjacent_undirected_step_deg": 85.0
+    }
+  ],
+  "video_sha256": "ce65a6a8f52308c693c8f04025afb527eae4c283ff4006f4e8910d943ee7db8e",
+  "human_visual_review": {
+    "reviewed_frames": 16,
+    "ellipse_overlays_on_displayed_racket_head": 16,
+    "unstable_steps_visually_source_consistent": 6,
+    "overlay_miss_failures": 0,
+    "review_sheets": [
+      "all-frame-review/frames-121-128.jpg",
+      "all-frame-review/frames-129-136.jpg"
+    ]
+  }
+}
