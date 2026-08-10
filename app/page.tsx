@@ -1,15 +1,26 @@
 import { literature, phases, statusLabel } from "./research-data";
 
 const attemptCount = phases.reduce((sum, phase) => sum + phase.attempts.length, 0);
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+const programRoutes = [
+  ["Visual evidence", "80 reviewed examples with source links, categories, and exact thumbnails.", "/visual-evidence/"],
+  ["Route ledger", "What ran, what failed, what remains inferred, and the next comparison.", "/ledger/"],
+  ["Serve Motion Lab", "Mark Kovacs-derived serve drills plus the contact mechanics lab.", "/serve-motion-lab/"],
+  ["Tennis Motion Lab", "The cited any-video → body-local teaching-animation research path.", "/motion-lab/"],
+  ["Practice Court", "The retained high-signal coach, athlete, academy, and research source index.", "/practice-court/"],
+  ["Mark Kovacs", "Primary-source serve doctrine and the exact source map behind Serve Motion Lab.", "/people/mark-kovacs/"],
+  ["Roman Prokes", "Racquet customization doctrine, exact source, and Jerry-specific application.", "/people/roman-prokes/"],
+] as const;
 
 const evidenceCuts = [
-  ["TT3D ping-pong reconstruction", "/media/tt3d.mp4"],
-  ["Uplifting Table Tennis", "/media/uplifting-table-tennis.mp4"],
-  ["Measured Bath serve", "/media/bath-4d56-two-view.mp4"],
-  ["Accepted tennis 2D evidence", "/media/accepted-2d-evidence.mp4"],
-  ["Rigid racket composition", "/media/rigid-2d-composition.mp4"],
-  ["Per-frame racket review", "/media/per-frame-racket-review.mp4"],
-  ["Human-mask propagation failure", "/media/human-mask-failure-review.mp4"],
+  ["TT3D ping-pong reconstruction", `${basePath}/media/tt3d.mp4`],
+  ["Uplifting Table Tennis", `${basePath}/media/uplifting-table-tennis.mp4`],
+  ["Measured Bath serve", `${basePath}/media/bath-4d56-two-view.mp4`],
+  ["Accepted tennis 2D evidence", `${basePath}/media/accepted-2d-evidence.mp4`],
+  ["Rigid racket composition", `${basePath}/media/rigid-2d-composition.mp4`],
+  ["Per-frame racket review", `${basePath}/media/per-frame-racket-review.mp4`],
+  ["Human-mask propagation failure", `${basePath}/media/human-mask-failure-review.mp4`],
 ] as const;
 
 export default function Home() {
@@ -32,6 +43,21 @@ export default function Home() {
         </nav>
       </header>
 
+      <section className="program-section" aria-labelledby="program-title">
+        <div className="section-heading">
+          <span>00</span>
+          <div><p className="kicker">One program · one deployment</p><h2 id="program-title">Open every surviving Tennis CV surface here.</h2></div>
+        </div>
+        <div className="program-grid">
+          {programRoutes.map(([title, description, href]) => (
+            <a className="program-card" href={`${basePath}${href}`} key={href}>
+              <span>Tennis CV route</span>
+              <div><h2>{title}</h2><p>{description}</p></div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section id="ping-pong" className="lead-section">
         <div className="section-heading">
           <span>01</span>
@@ -40,7 +66,7 @@ export default function Home() {
             <h2>Ping-pong: observations become a testable 3D trajectory.</h2>
           </div>
         </div>
-        <video controls playsInline preload="metadata" src="/media/tt3d.mp4" aria-label="TT3D table-tennis reconstruction demo" />
+        <video controls playsInline preload="metadata" src={`${basePath}/media/tt3d.mp4`} aria-label="TT3D table-tennis reconstruction demo" />
         <div className="method-note">
           <p><strong>Question.</strong> What does a convincing racket-sports reconstruction look like?</p>
           <p><strong>Method.</strong> Observe the ball, calibrate the scene, fit bounce and flight physics, then reproject the result into the source views.</p>
