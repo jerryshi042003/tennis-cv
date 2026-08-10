@@ -47,15 +47,16 @@ test("ships the ping-pong demo and representative evidence cuts", async () => {
   await Promise.all(required.map((path) => access(new URL(path, root))));
 });
 
-test("ships real moving Alcaraz passes and the six-frame source audit", async () => {
+test("ships real moving Alcaraz passes including the drop-to-rise lesson", async () => {
   const root = new URL("../public/motion-lab/", import.meta.url);
-  const [html, audit, traceAudit, measureAudit, pathAudit, jumpAudit] = await Promise.all([
+  const [html, audit, traceAudit, measureAudit, pathAudit, jumpAudit, phaseAudit] = await Promise.all([
     readFile(new URL("index.html", root), "utf8"),
     readFile(new URL("alcaraz-racket-arm-reviewed.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-motion-trace.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-wrist-vs-elbow.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-racket-head-path.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-racket-jump-audit.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("alcaraz-racket-drop-rise.json", root), "utf8").then(JSON.parse),
     access(new URL("alcaraz-racket-arm-reviewed.mp4", root)),
     access(new URL("alcaraz-racket-arm-reviewed.jpg", root)),
     access(new URL("alcaraz-motion-trace.mp4", root)),
@@ -66,6 +67,8 @@ test("ships real moving Alcaraz passes and the six-frame source audit", async ()
     access(new URL("alcaraz-racket-head-path.jpg", root)),
     access(new URL("alcaraz-racket-jump-audit.mp4", root)),
     access(new URL("alcaraz-racket-jump-audit.jpg", root)),
+    access(new URL("alcaraz-racket-drop-rise.mp4", root)),
+    access(new URL("alcaraz-racket-drop-rise.jpg", root)),
   ]);
   assert.match(html, /One real Alcaraz serve → one dark arm-and-racket trace/);
   assert.match(html, /alcaraz-motion-trace\.mp4/);
@@ -76,6 +79,8 @@ test("ships real moving Alcaraz passes and the six-frame source audit", async ()
   assert.match(html, /alcaraz-racket-head-path\.mp4/);
   assert.match(html, /Pass 05 · two-jump source check/);
   assert.match(html, /alcaraz-racket-jump-audit\.mp4/);
+  assert.match(html, /Pass 06 · racket drop → rise/);
+  assert.match(html, /alcaraz-racket-drop-rise\.mp4/);
   assert.doesNotMatch(html, /What the literature says|What this project tested|Next falsifiable experiment/);
   assert.equal(audit.frames, 76);
   assert.equal(audit.transport.decoded_frames, 76);
@@ -99,4 +104,10 @@ test("ships real moving Alcaraz passes and the six-frame source audit", async ()
   assert.equal(jumpAudit.unique_decoded_frames, 6);
   assert.deepEqual(jumpAudit.source_frames, [131, 132, 133, 138, 139, 140]);
   assert.equal(jumpAudit.verdict, "PASS_BOTH_JUMPS_SOURCE_CONSISTENT_FAST_30FPS_MOTION");
+  assert.equal(phaseAudit.decoded_frames, 16);
+  assert.equal(phaseAudit.unique_decoded_frames, 16);
+  assert.equal(phaseAudit.trophy_side_high_frame, 125);
+  assert.equal(phaseAudit.racket_drop_frame, 129);
+  assert.equal(phaseAudit.overhead_reach_frame, 134);
+  assert.equal(phaseAudit.verdict, "PASS_CLEAR_SOURCE_VIEW_DROP_TO_RISE_TEACHING_PHASE");
 });
