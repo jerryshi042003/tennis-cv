@@ -47,25 +47,30 @@ test("ships the ping-pong demo and representative evidence cuts", async () => {
   await Promise.all(required.map((path) => access(new URL(path, root))));
 });
 
-test("ships real moving Alcaraz passes and preserves the rejected measurement", async () => {
+test("ships real moving Alcaraz passes, the partial racket path, and the rejected measurement", async () => {
   const root = new URL("../public/motion-lab/", import.meta.url);
-  const [html, audit, traceAudit, measureAudit] = await Promise.all([
+  const [html, audit, traceAudit, measureAudit, pathAudit] = await Promise.all([
     readFile(new URL("index.html", root), "utf8"),
     readFile(new URL("alcaraz-racket-arm-reviewed.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-motion-trace.json", root), "utf8").then(JSON.parse),
     readFile(new URL("alcaraz-wrist-vs-elbow.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("alcaraz-racket-head-path.json", root), "utf8").then(JSON.parse),
     access(new URL("alcaraz-racket-arm-reviewed.mp4", root)),
     access(new URL("alcaraz-racket-arm-reviewed.jpg", root)),
     access(new URL("alcaraz-motion-trace.mp4", root)),
     access(new URL("alcaraz-motion-trace.jpg", root)),
     access(new URL("alcaraz-wrist-vs-elbow.mp4", root)),
     access(new URL("alcaraz-wrist-vs-elbow.jpg", root)),
+    access(new URL("alcaraz-racket-head-path.mp4", root)),
+    access(new URL("alcaraz-racket-head-path.jpg", root)),
   ]);
   assert.match(html, /One real Alcaraz serve → one dark arm-and-racket trace/);
   assert.match(html, /alcaraz-motion-trace\.mp4/);
   assert.match(html, /alcaraz-racket-arm-reviewed\.mp4/);
   assert.match(html, /Pass 03 · wrist below elbow · rejected/);
   assert.match(html, /alcaraz-wrist-vs-elbow\.mp4/);
+  assert.match(html, /Pass 04 · racket-head path · partial/);
+  assert.match(html, /alcaraz-racket-head-path\.mp4/);
   assert.doesNotMatch(html, /What the literature says|What this project tested|Next falsifiable experiment/);
   assert.equal(audit.frames, 76);
   assert.equal(audit.transport.decoded_frames, 76);
@@ -80,4 +85,9 @@ test("ships real moving Alcaraz passes and preserves the rejected measurement", 
   assert.deepEqual(measureAudit.sign_transition_frames, [115, 129, 132, 137, 138, 139]);
   assert.equal(measureAudit.exact_duplicate_transitions, 0);
   assert.equal(measureAudit.verdict, "REJECTED_MODEL_BOUNDARY_FLICKER_NOT_TEACHING_TRUTH");
+  assert.equal(pathAudit.frames, 76);
+  assert.equal(pathAudit.human_visual_centers_on_displayed_head, 76);
+  assert.deepEqual(pathAudit.discontinuity_frames, [132, 139]);
+  assert.equal(pathAudit.exact_duplicate_transitions, 0);
+  assert.equal(pathAudit.verdict, "PARTIAL_OBJECT_ONLY_PATH__76_OF_76_ON_HEAD__TWO_DISCONTINUITIES");
 });
