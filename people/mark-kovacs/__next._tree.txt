@@ -1,2 +1,2 @@
 :HL["/tennis-cv/_next/static/chunks/0c._oyyg8y8bf.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"people","param":null,"prefetchHints":0,"slots":{"children":{"name":"mark-kovacs","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"CaGqjaJe5SG4Z9xgBnIFe"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"people","param":null,"prefetchHints":0,"slots":{"children":{"name":"mark-kovacs","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"NKpL82kbym0X_aFt31BEw"}

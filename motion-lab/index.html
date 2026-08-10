@@ -1,184 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>From tennis video to explainable form</title>
-<meta name="description" content="A cited research review toward turning ordinary tennis video into a free-camera teaching animation.">
-<style>
-*{box-sizing:border-box}
-:root{color-scheme:dark;--bg:#0a0d0f;--panel:#11161a;--line:#2b343a;--muted:#96a2a9;--text:#f2f5f6;--soft:#cad2d6;--accent:#c7ff64;--blue:#78c6ff}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-main{width:min(920px,calc(100% - 36px));margin:auto;padding:68px 0 96px}
-.program-home{display:inline-block;margin-bottom:24px;font:12px ui-monospace,SFMono-Regular,Menlo,monospace}
-.eyebrow,h2,.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:750}
-h1{font-size:clamp(44px,8vw,78px);line-height:.98;letter-spacing:-.058em;margin:15px 0 25px;max-width:830px}
-.lede{font-size:clamp(19px,2.7vw,24px);line-height:1.45;color:var(--soft);max-width:790px}
-.plain{color:var(--soft);max-width:760px}
-section{border-top:1px solid var(--line);padding-top:30px;margin-top:56px}
-h2{margin:0 0 22px}
-h3{font-size:20px;line-height:1.3;margin:0 0 8px;letter-spacing:-.015em}
-p{margin:0 0 14px}
-a{color:var(--text);text-underline-offset:4px;text-decoration-color:#66737b}
-a:hover{text-decoration-color:var(--accent)}
-.goal{margin-top:32px;padding:20px 22px;border-left:3px solid var(--accent);background:#101518;color:var(--soft);max-width:790px}
-.goal strong{color:var(--text)}
-.reference-grid{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:30px;align-items:center}
-.reference{display:block;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#000}
-.reference img{display:block;width:100%;height:auto}
-.demo-video{display:block;width:100%;height:auto;background:#000;border:1px solid var(--line);border-radius:9px}
-.caption{color:var(--muted);font-size:13px;margin-top:10px}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
-.step{position:relative;border:1px solid var(--line);background:var(--panel);padding:18px;border-radius:9px;min-height:154px}
-.step:not(:last-child):after{content:"→";position:absolute;right:-19px;top:61px;color:#5f6a70;font-size:22px;z-index:2}
-.step .num{color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.1em}
-.step p{color:var(--muted);font-size:14px;line-height:1.45;margin:7px 0 0}
-.step.validation{border-color:#537638}
-.step.validation:before{content:"BENCHMARK ONLY";display:inline-block;margin-bottom:10px;color:var(--accent);font-size:10px;font-weight:800;letter-spacing:.1em}
-.callout{margin-top:18px;border:1px solid #47632f;background:#10180d;border-radius:9px;padding:22px}
-.callout h3{color:var(--accent)}
-.callout p{color:var(--soft);margin-bottom:0}
-.papers{border-top:1px solid var(--line)}
-.paper{display:grid;grid-template-columns:200px 1fr 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
-.paper p{color:var(--muted);font-size:14px;margin:0}
-.paper .answer{color:var(--soft)}
-.paper sup,.refs sup{color:var(--accent)}
-.results{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.result{border:1px solid var(--line);background:var(--panel);padding:22px;border-radius:9px}
-.result.bad{border-color:#613d3d}.result.good{border-color:#3f6040}
-.result .kicker{margin-bottom:7px}.result p{color:var(--soft);margin:0}
-.result strong{color:var(--text)}
-.conclusion{font-size:clamp(23px,4vw,34px);line-height:1.32;letter-spacing:-.025em;max-width:850px;margin-bottom:26px}
-.next{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
-.next:last-child{border-bottom:1px solid var(--line)}
-.next span{color:var(--accent);font-weight:800}.next p{color:var(--soft);margin:0}
-.refs{margin:0;padding-left:22px;color:var(--muted);font-size:14px}
-.refs li{padding:6px 0 6px 5px}.refs a{color:var(--soft)}
-footer{margin-top:48px;color:var(--muted);font-size:14px;display:flex;gap:20px;flex-wrap:wrap}
-@media(max-width:760px){
-  main{padding-top:44px}
-  .reference-grid,.results{grid-template-columns:1fr}
-  .reference-grid{gap:18px}.reference{max-width:480px}
-  .flow{grid-template-columns:1fr 1fr}
-  .step:not(:last-child):after{display:none}
-  .paper{grid-template-columns:1fr;gap:8px}
-}
-@media(max-width:480px){.flow{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090a0f">
+  <title>Tennis Motion Lab</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090a0f;--panel:#11131b;--ink:#f4f2f7;--soft:#aaa7b4;--line:#292b36;--violet:#e873de;--gold:#f4dc84}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif}
+    main{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:34px 0 64px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:42px}
+    header a{color:var(--soft);text-decoration:none;font-size:14px}
+    h1{font-size:18px;letter-spacing:.12em;text-transform:uppercase;margin:0}
+    section{margin:0 0 56px}
+    h2{font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--soft);margin:0 0 14px}
+    video,.reference{display:block;width:100%;border:1px solid var(--line);border-radius:12px;background:#05060a}
+    .reference{max-height:420px;object-fit:contain}
+    .caption{margin:12px 2px 0;font-size:15px;line-height:1.5;color:var(--soft)}
+    .caption strong{color:var(--ink);font-weight:620}
+    .caption a{color:var(--gold)}
+    .passes{display:grid;gap:44px}
+    .next{border-top:1px solid var(--line);padding-top:24px;font-size:20px;line-height:1.45;max-width:780px}
+    .next b{color:var(--violet)}
+    @media(max-width:640px){main{width:min(100% - 20px,1080px);padding-top:20px}section{margin-bottom:38px}.caption{font-size:14px}}
+  </style>
 </head>
 <body>
 <main>
-  <a class="program-home" href="../">← Tennis CV program</a>
-  <div class="eyebrow">Literature review · video → form → teaching</div>
-  <h1>Can one tennis video become usable 3D form?</h1>
-  <p class="lede">The goal is to start from ordinary video—especially professional footage—recover one stroke in a body-local frame, and turn it into a free-camera teaching animation.</p>
-  <div class="goal"><strong>Product rule:</strong> the viewer must be able to tell what was measured, what was inferred, and what was authored. A plausible animation is not automatically a faithful reconstruction.</div>
+  <header>
+    <h1>Tennis Motion Lab</h1>
+    <a href="../">All results</a>
+  </header>
 
   <section>
-    <h2>The visual target</h2>
-    <div class="reference-grid">
-      <div>
-        <a class="reference" href="https://learntabletennis.com/academy/3d-viewer-demo/" target="_blank" rel="noreferrer">
-          <img src="learn-table-tennis-reference.gif" alt="Short reference clip of the Learn Table Tennis forehand-topspin 3D viewer">
-        </a>
-        <p class="caption">Short excerpt from the official <a href="https://learntabletennis.com/academy/3d-viewer-demo/" target="_blank" rel="noreferrer">Learn Table Tennis 3D Viewer</a>. Reference work—not this project’s output.</p>
-      </div>
-      <p class="plain">The interaction is the inspiration: rotate the stroke, slow it down, and expose meaningful quantities such as racket path and body movement.<sup><a href="#ref-1">1</a></sup> The tennis version should add a stricter evidence layer: every lesson should connect a cited claim, a visible mechanism, and a drill.</p>
-    </div>
+    <h2>Goal</h2>
+    <img class="reference" src="learn-table-tennis-reference.gif" alt="Learn Table Tennis reference animation">
+    <p class="caption">Motion that explains itself.</p>
   </section>
 
-  <section>
-    <h2>Where the datasets fit</h2>
-    <div class="flow" aria-label="Research pipeline">
-      <div class="step"><div class="num">01 · INPUT</div><h3>Any single video</h3><p>Especially professional footage. This is the product input.</p></div>
-      <div class="step"><div class="num">02 · INFER</div><h3>Recover local pose</h3><p>Estimate one stroke around the athlete—not an entire simulated match.</p></div>
-      <div class="step validation"><h3>Check known 3D</h3><p>Bath and CalTennis test specific failure modes. They are rulers, not subjects.</p></div>
-      <div class="step"><div class="num">04 · EXPLAIN</div><h3>Teaching animation</h3><p>Generic avatar, free camera, one measured claim, one drill.</p></div>
-    </div>
-    <div class="callout">
-      <h3>Why Bath?</h3>
-      <p>Because it is a public, CC BY 4.0 metric motion-capture dataset: 75 marker trajectories in 3D at 180 Hz from an eight-camera system.<sup><a href="#ref-5">5</a></sup> That makes it useful for testing whether our retargeting and racket geometry preserve motion that is already known. <strong>It was never meant to replace pro video.</strong> It does not provide the synchronized raw camera footage, calibration, or per-frame ball centers needed to validate video-to-3D recovery or contact.</p>
-    </div>
-  </section>
+  <div class="passes">
+    <section>
+      <h2>Pass 02 · motion trace</h2>
+      <video controls muted loop playsinline preload="auto" poster="alcaraz-motion-trace.jpg">
+        <source src="alcaraz-motion-trace.mp4" type="video/mp4">
+        <a href="alcaraz-motion-trace.mp4">Open the video</a>
+      </video>
+      <p class="caption"><strong>One real Alcaraz serve → one dark arm-and-racket trace.</strong> 76/76 frames inspected. No 3D body. <a href="alcaraz-motion-trace.json">Receipt</a></p>
+    </section>
 
-  <section>
-    <h2>What the literature says</h2>
-    <div class="papers">
-      <article class="paper">
-        <h3>WHAM + GVHMR <sup><a href="#ref-2">2</a>, <a href="#ref-3">3</a></sup></h3>
-        <p class="answer">Monocular video can produce a plausible body and global trajectory. Modern methods explicitly use camera motion, gravity, and foot-contact estimates.</p>
-        <p>They do not make depth, grounding, fast racket motion, or ball contact automatically trustworthy—especially from broadcast cuts and blur.</p>
-      </article>
-      <article class="paper">
-        <h3>CalTennis <sup><a href="#ref-4">4</a></sup></h3>
-        <p class="answer">A tennis-specific, synchronized multi-view benchmark supports evaluation on 51 hours from 40 players. Its benchmark finds joint-angle recovery is now quite accurate.</p>
-        <p>All tested methods still struggle with depth and consistent foot contact—the exact quantities needed for confident world-grounded overlays.</p>
-      </article>
-      <article class="paper">
-        <h3>Vid2Player3D <sup><a href="#ref-6">6</a></sup></h3>
-        <p class="answer">Broadcast tennis can seed physically simulated player skills. It is the closest prior art to learning recognizable tennis movement from pro footage.</p>
-        <p>The released demo cannot run because trained models are unavailable due to footage licensing. Its full-match physics scope is also much larger than one teaching stroke.</p>
-      </article>
-      <article class="paper">
-        <h3>Bath motion capture <sup><a href="#ref-5">5</a></sup></h3>
-        <p class="answer">Metric marker trajectories let us audit animation transport and a stable local racket-marker cluster rather than judging only by appearance.</p>
-        <p>It is lab serve data, not professional broadcast footage, and cannot by itself prove athlete-specific reconstruction from video.</p>
-      </article>
-    </div>
-  </section>
+    <section>
+      <h2>Pass 01 · corrected arm</h2>
+      <video controls muted loop playsinline preload="metadata" poster="alcaraz-racket-arm-reviewed.jpg">
+        <source src="alcaraz-racket-arm-reviewed.mp4" type="video/mp4">
+        <a href="alcaraz-racket-arm-reviewed.mp4">Open the video</a>
+      </video>
+      <p class="caption"><strong>The real pixels and the reviewed racket arm.</strong> One disclosed manual frame; no 3D claim. <a href="alcaraz-racket-arm-reviewed.json">Receipt</a></p>
+    </section>
+  </div>
 
-  <section>
-    <h2>What this project tested</h2>
-    <video class="demo-video" controls muted loop playsinline preload="auto" poster="alcaraz-racket-arm-reviewed.jpg">
-      <source src="alcaraz-racket-arm-reviewed.mp4" type="video/mp4">
-      <a href="alcaraz-racket-arm-reviewed.mp4">Open the 76-frame video</a>
-    </video>
-    <p class="caption"><strong>Real moving result · one Alcaraz serve.</strong> Left: source. Right: the human-reviewed racket-bearing shoulder, elbow, and wrist. The clip has 76 changing H.264 frames; all 76 were inspected. One manual source-camera correction is visibly labeled, and detector identity switches when the arms cross. This is 2D teaching evidence—not pronation, 3D grip, or physical contact. <a href="alcaraz-racket-arm-reviewed.json">Open the exact audit</a>.</p>
-    <div class="results">
-      <div class="result bad">
-        <div class="kicker">Rejected</div>
-        <h3>Orbitable reconstruction from one broadcast view</h3>
-        <p>It looked smooth but failed the geometry gate: <strong>48.33 px</strong> median reprojection error, <strong>2.36 m</strong> median position error, and <strong>108.1°</strong> median orientation error. It was not suitable as evidence.</p>
-      </div>
-      <div class="result good">
-        <div class="kicker">Retained evidence</div>
-        <h3>Fixed-camera Alcaraz stroke review</h3>
-        <p>The honest result keeps the visible footage frame: <strong>61/61</strong> inspected joint frames, <strong>54/61</strong> racket silhouettes visible or uncertainty-labelled, and <strong>2.20 px</strong> median 2D ball-fit residual over eight reviewed observations.</p>
-      </div>
-    </div>
+  <section class="next">
+    <b>Next:</b> test whether one measured number—wrist speed or elbow angle—makes the trace more useful. If it does not, remove it.
   </section>
-
-  <section>
-    <h2>Current conclusion</h2>
-    <p class="conclusion">“Any video” remains the goal. The practical first product is one short, body-local stroke—not a metric digital twin of the athlete and not a full rally simulation.</p>
-    <p class="plain">Monocular recovery is the best candidate for the initial pose. Bath and multi-view tennis data belong in validation. Racket face, ball contact, depth, and grounding stay explicitly uncertain until they pass an independent view or measured-data check.</p>
-  </section>
-
-  <section>
-    <h2>Next falsifiable experiment</h2>
-    <div class="next"><span>1</span><p>Run the same short professional clip through a current monocular model and keep the stroke body-local.</p></div>
-    <div class="next"><span>2</span><p>Test the same transport and retargeting code on motion where 3D is known; Bath is useful here, and only here.</p></div>
-    <div class="next"><span>3</span><p>Render one generic-avatar lesson with a free camera and label every quantity as measured, inferred, or authored.</p></div>
-    <div class="next"><span>4</span><p>Use a held-out synchronized camera as the pass/fail gate before claiming accurate any-angle form.</p></div>
-  </section>
-
-  <section>
-    <h2>References</h2>
-    <ol class="refs">
-      <li id="ref-1"><a href="https://learntabletennis.com/academy/3d-viewer-demo/" target="_blank" rel="noreferrer">Learn Table Tennis. “3D Viewer (Demo).”</a> Accessed 2026.</li>
-      <li id="ref-2">Shin, S., Kim, J., Halilaj, E., &amp; Black, M. J. (2024). <a href="https://wham.is.tue.mpg.de/index.html" target="_blank" rel="noreferrer">“WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion.”</a> CVPR.</li>
-      <li id="ref-3">Shen, Z. et al. (2024). <a href="https://zju3dv.github.io/gvhmr/" target="_blank" rel="noreferrer">“World-Grounded Human Motion Recovery via Gravity-View Coordinates.”</a> SIGGRAPH Asia.</li>
-      <li id="ref-4">Demler, I. et al. (2026). <a href="https://arxiv.org/abs/2606.20542" target="_blank" rel="noreferrer">“CalTennis: Large Multi-View Tennis Video Dataset and Benchmark of Monocular-to-3D Pose Estimation.”</a> arXiv:2606.20542.</li>
-      <li id="ref-5">Durlind, G., Martinez-Hernandez, U., &amp; Assaf, T. (2025). <a href="https://doi.org/10.15125/BATH-01454" target="_blank" rel="noreferrer">Dataset for “Exploratory Proof-of-Concept: Predicting the Outcome of Tennis Serves Using Motion Capture and Deep Learning.”</a> University of Bath.</li>
-      <li id="ref-6">Zhang, H. et al. (2023). <a href="https://doi.org/10.1145/3592408" target="_blank" rel="noreferrer">“Learning Physically Simulated Tennis Skills from Broadcast Videos.”</a> ACM Transactions on Graphics.</li>
-    </ol>
-  </section>
-
-  <footer>
-    <a href="https://github.com/jerryshi042003/tennis-motion-lab">GitHub repository</a>
-    <a href="https://learntabletennis.com/academy/3d-viewer-demo/" target="_blank" rel="noreferrer">Open the reference viewer</a>
-  </footer>
 </main>
 </body>
 </html>

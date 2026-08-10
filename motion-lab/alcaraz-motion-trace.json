@@ -1,0 +1,484 @@
+{
+  "verdict": "PASS_MINIMAL_SOURCE_CAMERA_MOTION_TRACE",
+  "evidence_class": "SOURCE_CAMERA_2D_TEACHING_ANIMATION",
+  "frames": 76,
+  "fps": 30,
+  "source_frames": [
+    90,
+    165
+  ],
+  "arm_frames": 76,
+  "racket_frames": 76,
+  "exact_duplicate_transitions": 0,
+  "minimum_changed_channel_values": 162391,
+  "video_sha256": "46186746b6f5b5ce3db09ce9eeccad43d04a8231053b2dfbc38c5256c1ad1a0f",
+  "human_review": "All 76 enlarged source/trace pairs inspected across ten sequential sheets; the corrected arm stays on the racket-bearing side and the racket outline remains visible.",
+  "unsupported": [
+    "3D",
+    "pronation",
+    "grip",
+    "racket-face orientation",
+    "contact",
+    "force",
+    "spin",
+    "physics"
+  ],
+  "rows": [
+    {
+      "frame": 90,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 487
+    },
+    {
+      "frame": 91,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 522
+    },
+    {
+      "frame": 92,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 524
+    },
+    {
+      "frame": 93,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 511
+    },
+    {
+      "frame": 94,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 536
+    },
+    {
+      "frame": 95,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 546
+    },
+    {
+      "frame": 96,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 537
+    },
+    {
+      "frame": 97,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 614
+    },
+    {
+      "frame": 98,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 803
+    },
+    {
+      "frame": 99,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 806
+    },
+    {
+      "frame": 100,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 776
+    },
+    {
+      "frame": 101,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 891
+    },
+    {
+      "frame": 102,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 990
+    },
+    {
+      "frame": 103,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1089
+    },
+    {
+      "frame": 104,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1178
+    },
+    {
+      "frame": 105,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1060
+    },
+    {
+      "frame": 106,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1139
+    },
+    {
+      "frame": 107,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1125
+    },
+    {
+      "frame": 108,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1132
+    },
+    {
+      "frame": 109,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1237
+    },
+    {
+      "frame": 110,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1277
+    },
+    {
+      "frame": 111,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1516
+    },
+    {
+      "frame": 112,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1419
+    },
+    {
+      "frame": 113,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1093
+    },
+    {
+      "frame": 114,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1075
+    },
+    {
+      "frame": 115,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 961
+    },
+    {
+      "frame": 116,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1000
+    },
+    {
+      "frame": 117,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1000
+    },
+    {
+      "frame": 118,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1060
+    },
+    {
+      "frame": 119,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1061
+    },
+    {
+      "frame": 120,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 930
+    },
+    {
+      "frame": 121,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 122,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1109
+    },
+    {
+      "frame": 123,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1201
+    },
+    {
+      "frame": 124,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 842
+    },
+    {
+      "frame": 125,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 1014
+    },
+    {
+      "frame": 126,
+      "arm": "YOLO26x-R",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 802
+    },
+    {
+      "frame": 127,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 128,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 129,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 130,
+      "arm": "MANUAL-2D",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 837
+    },
+    {
+      "frame": 131,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 132,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 133,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 134,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 135,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 136,
+      "arm": "YOLO26x-R",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 137,
+      "arm": "MediaPipe-L",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 138,
+      "arm": "MediaPipe-L",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 139,
+      "arm": "MediaPipe-L",
+      "racket": "reviewed_manual_2d",
+      "racket_pixels": 1
+    },
+    {
+      "frame": 140,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 712
+    },
+    {
+      "frame": 141,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 758
+    },
+    {
+      "frame": 142,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 692
+    },
+    {
+      "frame": 143,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 903
+    },
+    {
+      "frame": 144,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 892
+    },
+    {
+      "frame": 145,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 813
+    },
+    {
+      "frame": 146,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 771
+    },
+    {
+      "frame": 147,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 685
+    },
+    {
+      "frame": 148,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 733
+    },
+    {
+      "frame": 149,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 683
+    },
+    {
+      "frame": 150,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 685
+    },
+    {
+      "frame": 151,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 662
+    },
+    {
+      "frame": 152,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 610
+    },
+    {
+      "frame": 153,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 628
+    },
+    {
+      "frame": 154,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 500
+    },
+    {
+      "frame": 155,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 549
+    },
+    {
+      "frame": 156,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 508
+    },
+    {
+      "frame": 157,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 502
+    },
+    {
+      "frame": 158,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 494
+    },
+    {
+      "frame": 159,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 464
+    },
+    {
+      "frame": 160,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 491
+    },
+    {
+      "frame": 161,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 489
+    },
+    {
+      "frame": 162,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 388
+    },
+    {
+      "frame": 163,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 337
+    },
+    {
+      "frame": 164,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 247
+    },
+    {
+      "frame": 165,
+      "arm": "MediaPipe-L",
+      "racket": "accepted_sam_contour",
+      "racket_pixels": 209
+    }
+  ]
+}
