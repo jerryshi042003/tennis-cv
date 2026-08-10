@@ -1,0 +1,21 @@
+{
+  "verdict": "PASS_CLEAR_SOURCE_VIEW_DROP_TO_RISE_TEACHING_PHASE",
+  "evidence_class": "SOURCE_CAMERA_2D_RACKET_PHASE_TEACHING",
+  "source_frames": [
+    121,
+    136
+  ],
+  "source_fps": 30,
+  "playback_fps": 8,
+  "playback_speed": 0.26666666666666666,
+  "decoded_frames": 16,
+  "unique_decoded_frames": 16,
+  "human_visual_points_on_displayed_head": 16,
+  "human_review": "All 16 enlarged source/trace frames were inspected. The computed f125 trophy-side high, f129 behind-body drop and f134 overhead reach correspond to the real source; every current marker remains on the displayed racket head; cyan drop and gold rise separate the two directions without smoothing.",
+  "trophy_side_high_frame": 125,
+  "racket_drop_frame": 129,
+  "overhead_reach_frame": 134,
+  "drop_screen_delta_y": 96,
+  "rise_screen_delta_y": -197,
+  "video_sha256": "e96251037d5ab851d552a413311d8426e24ca71815ac6791f98734d1d6585104"
+}
