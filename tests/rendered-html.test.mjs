@@ -46,3 +46,19 @@ test("ships the ping-pong demo and representative evidence cuts", async () => {
   ];
   await Promise.all(required.map((path) => access(new URL(path, root))));
 });
+
+test("ships the reviewed Alcaraz racket arm as a real moving video", async () => {
+  const root = new URL("../public/motion-lab/", import.meta.url);
+  const [html, audit] = await Promise.all([
+    readFile(new URL("index.html", root), "utf8"),
+    readFile(new URL("alcaraz-racket-arm-reviewed.json", root), "utf8").then(JSON.parse),
+    access(new URL("alcaraz-racket-arm-reviewed.mp4", root)),
+    access(new URL("alcaraz-racket-arm-reviewed.jpg", root)),
+  ]);
+  assert.match(html, /Real moving result · one Alcaraz serve/);
+  assert.match(html, /alcaraz-racket-arm-reviewed\.mp4/);
+  assert.equal(audit.frames, 76);
+  assert.equal(audit.transport.decoded_frames, 76);
+  assert.equal(audit.transport.exact_duplicate_transitions, 0);
+  assert.equal(audit.verdict, "PASS_HUMAN_REVIEWED_SOURCE_CAMERA_RACKET_ARM");
+});

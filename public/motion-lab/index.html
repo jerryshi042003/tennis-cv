@@ -27,6 +27,7 @@ a:hover{text-decoration-color:var(--accent)}
 .reference-grid{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:30px;align-items:center}
 .reference{display:block;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#000}
 .reference img{display:block;width:100%;height:auto}
+.demo-video{display:block;width:100%;height:auto;background:#000;border:1px solid var(--line);border-radius:9px}
 .caption{color:var(--muted);font-size:13px;margin-top:10px}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
 .step{position:relative;border:1px solid var(--line);background:var(--panel);padding:18px;border-radius:9px;min-height:154px}
@@ -129,6 +130,11 @@ footer{margin-top:48px;color:var(--muted);font-size:14px;display:flex;gap:20px;f
 
   <section>
     <h2>What this project tested</h2>
+    <video class="demo-video" controls muted loop playsinline preload="auto" poster="alcaraz-racket-arm-reviewed.jpg">
+      <source src="alcaraz-racket-arm-reviewed.mp4" type="video/mp4">
+      <a href="alcaraz-racket-arm-reviewed.mp4">Open the 76-frame video</a>
+    </video>
+    <p class="caption"><strong>Real moving result · one Alcaraz serve.</strong> Left: source. Right: the human-reviewed racket-bearing shoulder, elbow, and wrist. The clip has 76 changing H.264 frames; all 76 were inspected. One manual source-camera correction is visibly labeled, and detector identity switches when the arms cross. This is 2D teaching evidence—not pronation, 3D grip, or physical contact. <a href="alcaraz-racket-arm-reviewed.json">Open the exact audit</a>.</p>
     <div class="results">
       <div class="result bad">
         <div class="kicker">Rejected</div>
