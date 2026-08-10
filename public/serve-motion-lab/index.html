@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Serve Lab — Two Engines</title>
+<style>
+  :root{
+    --bg:#E9E7E1; --surface:#EFEEE9; --ink:#17150F; --muted:#837E71;
+    --line:rgba(23,21,15,.16); --line-2:rgba(23,21,15,.32); --accent:#D62A1B;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --edge:clamp(18px,5vw,64px);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#100F0C; --surface:#181611; --ink:#E7E3D9; --muted:#8B8578;
+      --line:rgba(231,227,217,.15); --line-2:rgba(231,227,217,.32); --accent:#F0392B;}
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    line-height:1.5; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 var(--edge);}
+  .program-home{display:inline-block; margin:16px 0 0; font:12px var(--mono);}
+  .mono{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+  .lbl{font-family:var(--mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted);}
+  .accent{color:var(--accent);}
+  hr.rule{border:0; border-top:1px solid var(--ink); margin:0;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .tag{display:flex; justify-content:space-between; align-items:baseline; gap:12px;
+    padding:16px 0 14px; border-bottom:1px solid var(--ink); flex-wrap:wrap;}
+  .tag .lbl{color:var(--ink);}
+
+  .hero{padding:clamp(36px,7vw,84px) 0 clamp(26px,5vw,52px);}
+  .hero h1{font-size:clamp(2.6rem,9vw,6rem); font-weight:800; letter-spacing:-.035em;
+    line-height:.92; margin:0; text-transform:uppercase; text-wrap:balance;}
+  .hero h1 .thin{font-weight:300;}
+  .hero .lede{max-width:60ch; margin:clamp(18px,3vw,28px) 0 0; font-size:clamp(1.02rem,2.2vw,1.24rem);}
+  .hero .lede b{font-weight:700;}
+  .metabar{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:1px;
+    background:var(--line); border:1px solid var(--line); margin-top:32px;}
+  .metabar div{background:var(--bg); padding:13px 15px; display:flex; flex-direction:column; gap:4px;}
+  .metabar .v{font-family:var(--mono); font-size:.88rem;}
+
+  section{padding:clamp(40px,6.5vw,76px) 0;}
+  .eyebrow{display:flex; align-items:baseline; gap:14px; margin:0 0 10px;}
+  .eyebrow .no{font-family:var(--mono); font-size:.7rem; color:var(--accent); letter-spacing:.1em;}
+  .eyebrow h2{font-size:clamp(1.35rem,3.4vw,2rem); font-weight:800; letter-spacing:-.02em;
+    text-transform:uppercase; margin:0; text-wrap:balance;}
+  .say{max-width:64ch; color:var(--muted); margin:0 0 22px;}
+  .say b{color:var(--ink);}
+
+  /* drill layout: schematic | text | video */
+  .drill{display:grid; grid-template-columns:minmax(200px,255px) 1fr; gap:clamp(20px,4vw,44px); align-items:start;}
+  .drill .fig{border:1px solid var(--line); background:var(--surface); padding:12px;}
+  .drill .fig svg{width:100%; height:auto; display:block;}
+  .drill .fig .figcap{font-family:var(--mono); font-size:.62rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--muted); padding:8px 2px 0; display:block;}
+  .dose{display:flex; gap:1px; background:var(--line); border:1px solid var(--line); margin:14px 0 16px; flex-wrap:wrap;}
+  .dose div{background:var(--bg); padding:10px 14px; flex:1; min-width:110px;}
+  .dose .k{display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.13em; text-transform:uppercase; color:var(--muted);}
+  .dose .v{display:block; font-family:var(--mono); font-size:.95rem; margin-top:4px;}
+  .dose .v.th{color:var(--accent); font-size:.85rem;}
+  .drill p{margin:0 0 12px; max-width:56ch;}
+  .drill p b{font-weight:700;}
+  .q{border-left:2px solid var(--accent); padding:2px 0 2px 16px; margin:0 0 16px; font-size:.95rem; max-width:56ch;}
+  .q .who{display:block; font-family:var(--mono); font-size:.64rem; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--muted); margin-top:6px;}
+
+  .vid{margin-top:16px; border:1px solid var(--line-2); background:#000; aspect-ratio:16/9; max-width:640px;}
+  .vid iframe{width:100%; height:100%; border:0; display:block;}
+  .vidcap{font-family:var(--mono); font-size:.66rem; letter-spacing:.08em; color:var(--muted);
+    margin-top:8px; text-transform:uppercase; max-width:640px;}
+  .vidcap b{color:var(--ink);}
+
+  .missgrid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line);
+    border:1px solid var(--line); max-width:760px;}
+  .missgrid div{background:var(--bg); padding:18px;}
+  .missgrid .m{font-family:var(--mono); font-weight:700; text-transform:uppercase; font-size:.9rem;}
+  .missgrid p{font-size:.9rem; color:var(--muted); margin:8px 0 0;}
+  .missgrid p b{color:var(--ink);}
+
+  footer{border-top:1px solid var(--ink); padding:24px 0 60px; display:flex;
+    justify-content:space-between; gap:14px; flex-wrap:wrap;}
+
+  @media (max-width:640px){ .drill{grid-template-columns:1fr;} .missgrid{grid-template-columns:1fr;} }
+
+  /* ---------- schematic animation kit ---------- */
+  .sv-line{stroke:var(--ink); stroke-width:5; stroke-linecap:round; fill:none;}
+  .sv-thin{stroke:var(--ink); stroke-width:2; fill:none; opacity:.5;}
+  .sv-dash{stroke:var(--line-2); stroke-width:2; stroke-dasharray:5 5; fill:none;}
+  .sv-dot{fill:var(--ink);}
+  .sv-mk{fill:var(--accent);}
+  .sv-mkline{stroke:var(--accent); stroke-width:4; stroke-linecap:round; fill:none;}
+  .sv-txt{font-family:var(--mono); font-size:10px; letter-spacing:.1em; fill:var(--muted); text-transform:uppercase;}
+  .sv-band{fill:var(--accent); opacity:.18;}
+  svg .gm{transform-box:fill-box;}
+
+  @media (prefers-reduced-motion:no-preference){
+    /* 1 · hip explode: shallow load, instant up-and-out at 45° */
+    .a-hip{animation:hip 2.6s cubic-bezier(.5,0,.4,1) infinite;}
+    @keyframes hip{0%,12%{transform:translate(0,0)} 38%{transform:translate(0,26px)} 52%,78%{transform:translate(-20px,-34px)} 100%{transform:translate(0,0)}}
+    .a-hiparrow{animation:hiparrow 2.6s linear infinite; opacity:0;}
+    @keyframes hiparrow{38%{opacity:0} 44%,72%{opacity:1} 80%,100%{opacity:0}}
+    /* 2 · long-axis: racket face sweeps edge→face→out */
+    .a-axis{transform-origin:50% 100%; animation:axis 2.2s cubic-bezier(.6,0,.3,1) infinite;}
+    @keyframes axis{0%,18%{transform:rotate(-58deg)} 55%{transform:rotate(6deg)} 70%,100%{transform:rotate(48deg)}}
+    .a-face{transform-origin:50% 50%; animation:face 2.2s linear infinite;}
+    @keyframes face{0%,30%{transform:scaleX(.16)} 52%,60%{transform:scaleX(1)} 80%,100%{transform:scaleX(.2)}}
+    /* 3 · pause vs one-count */
+    .a-stuck{animation:stuck 2.8s ease-in-out infinite;}
+    @keyframes stuck{0%{transform:translateY(0)} 25%{transform:translateY(24px)} 60%{transform:translateY(24px)} 85%,100%{transform:translateY(2px)}}
+    .a-snap{animation:snap 2.8s cubic-bezier(.55,0,.35,1) infinite;}
+    @keyframes snap{0%,10%{transform:translateY(0)} 32%{transform:translateY(22px)} 48%,70%{transform:translateY(-26px)} 90%,100%{transform:translateY(0)}}
+    .a-drain{animation:drain 2.8s linear infinite; transform-origin:50% 100%;}
+    @keyframes drain{0%,25%{transform:scaleY(0)} 60%{transform:scaleY(1)} 61%,100%{transform:scaleY(0)}}
+    /* 4 · side-on hold then snap through */
+    .a-open{transform-origin:50% 50%; animation:open 3s ease-in-out infinite;}
+    @keyframes open{0%,15%{transform:rotate(0)} 45%,60%{transform:rotate(74deg)} 90%,100%{transform:rotate(0)}}
+    .a-hold{transform-origin:50% 50%; animation:hold 3s cubic-bezier(.7,0,.2,1) infinite;}
+    @keyframes hold{0%,55%{transform:rotate(0)} 72%,82%{transform:rotate(84deg)} 96%,100%{transform:rotate(0)}}
+    .a-flash{animation:flash 3s linear infinite; opacity:0;}
+    @keyframes flash{70%{opacity:0} 74%,82%{opacity:1} 86%,100%{opacity:0}}
+    /* 5 · toss release window */
+    .a-toss{animation:toss 2.6s cubic-bezier(.4,0,.6,1) infinite;}
+    @keyframes toss{0%,18%{transform:translateY(0); opacity:1} 55%{transform:translateY(-84px); opacity:1} 68%,100%{transform:translateY(-118px); opacity:0}}
+    .a-armup{transform-origin:100% 100%; animation:armup 2.6s cubic-bezier(.4,0,.6,1) infinite;}
+    @keyframes armup{0%,10%{transform:rotate(26deg)} 50%,100%{transform:rotate(0deg)}}
+    /* 6 · kick brush 7→1 + cartwheel tilt */
+    .a-brush{stroke-dasharray:150; stroke-dashoffset:150; animation:brush 2.2s cubic-bezier(.5,0,.4,1) infinite;}
+    @keyframes brush{0%,20%{stroke-dashoffset:150} 60%,75%{stroke-dashoffset:0} 100%{stroke-dashoffset:0}}
+    .a-tilt{transform-origin:50% 50%; animation:tilt 2.2s ease-in-out infinite;}
+    @keyframes tilt{0%,20%{transform:rotate(-14deg)} 60%,80%{transform:rotate(16deg)} 100%{transform:rotate(-14deg)}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="program-home" href="../">← Tennis CV program</a>
+
+  <div class="tag">
+    <span class="lbl">Serve Lab — Two Engines</span>
+    <span class="lbl"><a href="contact.html" style="text-decoration:none" class="accent">Contact Lab 3D →</a> · J. Shi · platform · MMXXVI</span>
+  </div>
+
+  <header class="hero">
+    <h1>Hip up.<br><span class="thin">Arm through.</span></h1>
+    <p class="lede">Kovacs, verbatim: <b>"Improve your back-hip vertical displacement and your ability to get through the long-axis range faster — your serve speed goes up… those are the two things."</b> Your flat feel isn't a power shortage — it's a low toss drifting out front + opening up early. Four drills, each with a schematic and the exact minute of footage.</p>
+    <div class="metabar">
+      <div><span class="lbl">Engine 1</span><span class="v">back hip · UP fast</span></div>
+      <div><span class="lbl">Engine 2</span><span class="v">long-axis · through fast</span></div>
+      <div><span class="lbl">Rule</span><span class="v accent">max 2 thoughts</span></div>
+      <div><span class="lbl">Back guard</span><span class="v">legs carry · no collapse</span></div>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <!-- 01 BACK-LEG -->
+  <section>
+    <div class="eyebrow"><span class="no">01</span><h2>Back-leg serves — Engine 1</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Schematic: server loading on the back leg, hip point exploding up and out at 45 degrees">
+          <line class="sv-dash" x1="14" y1="216" x2="206" y2="216"/>
+          <g class="gm a-hip">
+            <circle class="sv-dot" cx="120" cy="52" r="13"/>
+            <path class="sv-line" d="M120 65 L114 118"/>
+            <path class="sv-line" d="M114 118 L108 168 L102 214"/>
+            <path class="sv-line" d="M120 78 L94 60 M120 82 L146 106"/>
+            <circle class="sv-mk" cx="114" cy="118" r="8"/>
+          </g>
+          <path class="sv-dash" d="M150 176 L150 214"/>
+          <text class="sv-txt" x="118" y="232">front foot off</text>
+          <g class="a-hiparrow">
+            <path class="sv-mkline" d="M78 150 L46 106"/>
+            <path d="M46 106 l2 14 l10 -9 z" fill="var(--accent)"/>
+            <text class="sv-txt" x="14" y="88" fill="var(--accent)">45° up+out</text>
+          </g>
+        </svg>
+        <span class="figcap">red dot = your right hip. speed of that dot IS the serve.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Dose</span><span class="v">10 @ 60%</span></div>
+          <div><span class="k">Slot</span><span class="v">first, every bucket</span></div>
+          <div><span class="k">One thought</span><span class="v th">"explode UP off the right hip"</span></div>
+        </div>
+        <p>Full motion standing on the <b>back leg only</b>, front foot off the ground. Good servers lose only 5–7 mph like this — if yours falls apart, you're arm-serving. It's not the bend: <b>"it's not the depth that they go down, it's how explosive they jump up."</b></p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/jvDds3KEY4s?start=210" title="Kovacs — where serve power really comes from (hip displacement)" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Kovacs, queued to 3:30</b> — "not the depth… how explosive they jump up" · vertical hip displacement</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- 02 NO-PAUSE -->
+  <section>
+    <div class="eyebrow"><span class="no">02</span><h2>No-pause tempo — down-up in ONE count</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Schematic comparing a server pausing at the bottom of the leg load, losing energy, versus rebounding in one count">
+          <line class="sv-dash" x1="14" y1="210" x2="206" y2="210"/>
+          <g class="gm a-stuck">
+            <circle class="sv-dot" cx="62" cy="66" r="11"/>
+            <path class="sv-line" d="M62 77 L62 128 M62 128 L56 172 L52 206"/>
+          </g>
+          <rect class="a-drain" x="42" y="120" width="6" height="50" fill="var(--accent)"/>
+          <text class="sv-txt" x="30" y="230" fill="var(--accent)">wait = leak</text>
+          <g class="gm a-snap">
+            <circle class="sv-dot" cx="158" cy="66" r="11"/>
+            <path class="sv-line" d="M158 77 L158 128 M158 128 L152 172 L148 206"/>
+            <circle class="sv-mk" cx="158" cy="128" r="7"/>
+          </g>
+          <text class="sv-txt" x="132" y="230">one count</text>
+        </svg>
+        <span class="figcap">left: stuck at the bottom. right: the rebound you want.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Dose</span><span class="v">15 serves</span></div>
+          <div><span class="k">Depth</span><span class="v">shallower than now</span></div>
+          <div><span class="k">One thought</span><span class="v th">"don't wait at the bottom"</span></div>
+        </div>
+        <p><b>"Good players usually load too much… every millisecond that you wait at the bottom, you lose energy."</b> Not a bigger jump — a <b>shallower, faster</b> move. Wawrinka: mediocre depth, out of it fast, 130+. This is your "super quick jump" question answered: quicker, not higher.</p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/HdgBUIEaRsQ?start=143" title="Kovacs — what to avoid on the serve (loading too deep, waiting at the bottom)" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Kovacs, queued to 2:23</b> — over-loading · "every millisecond at the bottom" · the collapse chain that hurt your back</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- 03 SIDE-ON -->
+  <section>
+    <div class="eyebrow"><span class="no">03</span><h2>Side-on hold — where the slice comes back</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Top-down schematic: shoulders opening early versus holding side-on until contact then snapping through">
+          <line class="sv-thin" x1="14" y1="34" x2="206" y2="34"/>
+          <text class="sv-txt" x="88" y="24">net</text>
+          <g class="gm a-open">
+            <path class="sv-line" d="M30 130 L94 130"/>
+            <circle class="sv-dot" cx="62" cy="130" r="7"/>
+          </g>
+          <text class="sv-txt" x="30" y="170" fill="var(--accent)">opens early = flat</text>
+          <g class="gm a-hold">
+            <path class="sv-mkline" d="M126 130 L190 130"/>
+            <circle class="sv-dot" cx="158" cy="130" r="7"/>
+          </g>
+          <g class="a-flash"><circle cx="188" cy="76" r="6" fill="var(--accent)"/><text class="sv-txt" x="128" y="66" fill="var(--accent)">contact</text></g>
+          <text class="sv-txt" x="128" y="170">holds · then snaps</text>
+          <text class="sv-txt" x="128" y="188">chest → right fence</text>
+        </svg>
+        <span class="figcap">shoulder line from above. red = you, holding longer.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Dose</span><span class="v">10 serves</span></div>
+          <div><span class="k">Check</span><span class="v">strings face side fence at drop</span></div>
+          <div><span class="k">One thought</span><span class="v th">"left deltoid to the net — longer"</span></div>
+        </div>
+        <p><b>"Chest pointing to the right side fence, left deltoid pointing to the net, as long as possible."</b> Open early and the strings square to the net — there is nothing left to brush, and the Takao slice physically can't happen. This one drill is why your serve feels flat.</p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/krKYy4eqgdQ?start=2378" title="Kovacs Tennis Congress talk — stay side-on, shoulder over shoulder" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Kovacs, queued to 39:38</b> — side-on / shoulder-over-shoulder · strings to the side fence</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- 04 TOSS WINDOW -->
+  <section>
+    <div class="eyebrow"><span class="no">04</span><h2>Toss window — the 10/10 lever</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Schematic: straight tossing arm releasing the ball inside a narrow band between the eyes and the top of the head">
+          <rect class="sv-band" x="24" y="64" width="172" height="26"/>
+          <text class="sv-txt" x="30" y="58" fill="var(--accent)">release here · &lt;6 in</text>
+          <circle class="sv-thin" cx="152" cy="84" r="20"/>
+          <path class="sv-thin" d="M152 104 L152 150"/>
+          <g class="gm a-armup"><path class="sv-line" d="M152 148 L92 190"/></g>
+          <g class="gm a-toss"><circle class="sv-mk" cx="86" cy="182" r="8"/></g>
+          <line class="sv-dash" x1="24" y1="64" x2="24" y2="90"/>
+          <line class="sv-dash" x1="196" y1="64" x2="196" y2="90"/>
+          <text class="sv-txt" x="30" y="226">straight arm · bent elbow = variability</text>
+        </svg>
+        <span class="figcap">eyes → top of head. release low = ball out front = your flat push.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Dose</span><span class="v">10 tosses · 8 in a racket head</span></div>
+          <div><span class="k">Slot</span><span class="v">end of session · brainless</span></div>
+          <div><span class="k">One thought</span><span class="v th">"release between eyes and hairline"</span></div>
+        </div>
+        <p>The release window is <b>"between the eyes and the top of the head… less than 6 inches of variability."</b> Release too low → <b>"it gets out in front of you and you're chasing"</b> → square-face flat push. Straight arm; a bent elbow re-adds the variability. Contact quality gates everything: <b>"130 vs 138 on tiny contact differences."</b></p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/krKYy4eqgdQ?start=1615" title="Kovacs Tennis Congress talk — the toss release window" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Kovacs, queued to 26:55</b> — the eyes-to-hairline release window · straight tossing arm</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- 05 KICK -->
+  <section>
+    <div class="eyebrow"><span class="no">05</span><h2>Kick — same engines, different toss</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Back-view schematic: toss behind and left of the head, racket brushing up and across from 7 to 1 while the shoulder line cartwheels">
+          <circle class="sv-thin" cx="110" cy="150" r="16"/>
+          <path class="sv-thin" d="M110 166 L110 206"/>
+          <g class="gm a-tilt"><path class="sv-line" d="M64 150 L156 150"/></g>
+          <circle class="sv-mk" cx="88" cy="66" r="7"/>
+          <text class="sv-txt" x="18" y="52" fill="var(--accent)">toss behind · left</text>
+          <path class="sv-mkline a-brush" d="M76 190 C 92 150, 128 108, 158 84"/>
+          <path d="M158 84 l-13 2 l7 11 z" fill="var(--accent)"/>
+          <text class="sv-txt" x="210" y="112" text-anchor="end">7 → 1 brush</text>
+          <text class="sv-txt" x="24" y="228">cartwheel supplies the up</text>
+        </svg>
+        <span class="figcap">the up you brush with comes from engine 1 + shoulder-over-shoulder.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Dose</span><span class="v">15 @ end · 20-in-a-row goal</span></div>
+          <div><span class="k">Feel step</span><span class="v">5 balls from service box first</span></div>
+          <div><span class="k">One thought</span><span class="v th">"toss behind · brush across"</span></div>
+        </div>
+        <p>Your question — more leg, faster acceleration, or higher brush? <b>The same two engines.</b> The hip supplies the UP the brush rides on; long-axis speed IS brush speed. A steeper hand path alone just trades pace for spin. What unlocks kick: <b>toss slightly behind/left + stay side-on + cartwheel</b>. Your flatter-brush-through-the-middle observation is real (inside-strings contact spins more) — keep it.</p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/eBa-sy2Mt1s" title="Topspin kick serve in slow motion, side and back view" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Kick serve slow-mo, side + back view</b> — watch the toss sit behind the head and the shoulder line cartwheel; the racket only passes through</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- 06 THE MODEL -->
+  <section>
+    <div class="eyebrow"><span class="no">06</span><h2>The model — Sampras, hips only</h2></div>
+    <div class="drill">
+      <div class="fig">
+        <svg viewBox="0 0 220 240" role="img" aria-label="Schematic of the back hip rotating back and down, then releasing up and out into the court">
+          <path class="sv-dash" d="M40 200 L190 200"/>
+          <circle class="sv-thin" cx="118" cy="120" r="52"/>
+          <circle class="sv-mk" cx="150" cy="158" r="9"/>
+          <path class="sv-mkline" d="M150 158 C 120 176, 84 160, 78 128" fill="none"/>
+          <path d="M78 128 l0 14 l11 -7 z" fill="var(--accent)"/>
+          <text class="sv-txt" x="34" y="110">back + down…</text>
+          <path class="sv-thin" d="M78 120 C 84 84, 118 62, 152 70"/>
+          <path d="M152 70 l-12 -5 l2 12 z" fill="var(--ink)"/>
+          <text class="sv-txt" x="118" y="48">…then up + out</text>
+          <text class="sv-txt" x="34" y="228">the bow is a RESULT — never coach it directly</text>
+        </svg>
+        <span class="figcap">store back-and-down → release up-and-out. that's the whole sampras bow.</span>
+      </div>
+      <div>
+        <div class="dose">
+          <div><span class="k">Watch for</span><span class="v">back hip: back + down → up + out</span></div>
+          <div><span class="k">Ignore</span><span class="v">the finish — "ball's gone"</span></div>
+          <div><span class="k">Why him</span><span class="v th">the platform reference</span></div>
+        </div>
+        <p>Right model for a platform server. But watch his <b>hips</b>, not his arm: <b>"store energy back and down so you can release it up and out into the court."</b> Coaching the bow itself (front hip out, early weight forward) produced <b>"a whole generation of pretty bad servers"</b> — and the chest-collapse version of it is exactly the chain that took out your mid-back.</p>
+        <div class="vid"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/jBv4WjGQWFQ" title="Pete Sampras serving in super slow motion" allowfullscreen></iframe></div>
+        <p class="vidcap"><b>Sampras, super slow-mo</b> — one rep per viewing: eyes only on the right hip</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- MISS STRIP -->
+  <section>
+    <div class="eyebrow"><span class="no">07</span><h2>Miss diagnosis</h2></div>
+    <div class="missgrid">
+      <div><span class="m accent">Into the net</span><p>You <b>opened up early</b> — didn't hold shoulder-over-shoulder, pulled the ball down. Almost never the toss.</p></div>
+      <div><span class="m">Long</span><p><b>Toss drifted into the court</b>, and/or no long-axis rotation — can't reach the high-elbow thumb-down position.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="lbl">Max two thoughts per session: hip up · stay side-on</span>
+    <span class="lbl accent">If the mid-back talks, it's 02/03 done wrong — stop</span>
+  </footer>
+
+</div>
+</body>
+</html>

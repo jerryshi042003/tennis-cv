@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Lab — String to Ball in 3D</title>
+<style>
+  :root{
+    --bg:#E9E7E1; --surface:#EFEEE9; --ink:#17150F; --muted:#837E71;
+    --line:rgba(23,21,15,.16); --line-2:rgba(23,21,15,.32); --accent:#D62A1B;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif; --mono:ui-monospace,"SF Mono",Menlo,monospace;
+    --edge:clamp(16px,4vw,48px);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#100F0C; --surface:#181611; --ink:#E7E3D9; --muted:#8B8578;
+      --line:rgba(231,227,217,.15); --line-2:rgba(231,227,217,.32); --accent:#F0392B;}
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); line-height:1.45;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 var(--edge);}
+  .lbl{font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);}
+  .accent{color:var(--accent);}
+  a{color:inherit;}
+  .tag{display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:14px 0 12px;
+    border-bottom:1px solid var(--ink); flex-wrap:wrap;}
+  .tag .lbl{color:var(--ink);}
+  h1{font-size:clamp(1.7rem,5vw,3.2rem); font-weight:800; letter-spacing:-.03em; text-transform:uppercase;
+    line-height:.95; margin:26px 0 10px;}
+  .sub{max-width:70ch; color:var(--muted); margin:0 0 18px; font-size:.98rem;}
+  .sub b{color:var(--ink);}
+
+  .lab{display:grid; grid-template-columns:1fr 300px; gap:18px; align-items:start;}
+  @media (max-width:900px){.lab{grid-template-columns:1fr;}}
+  #stage{position:relative; border:1px solid var(--line-2); background:var(--surface); aspect-ratio:16/10; overflow:hidden;}
+  #stage canvas{display:block; width:100%; height:100%; touch-action:none; cursor:grab;}
+  #phase{position:absolute; top:10px; left:12px; font-family:var(--mono); font-size:.72rem;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--accent); pointer-events:none;}
+  #viewtag{position:absolute; top:10px; right:12px; font-family:var(--mono); font-size:.62rem;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--muted); pointer-events:none;}
+
+  .row{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; align-items:center;}
+  button{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+    background:var(--bg); color:var(--ink); border:1px solid var(--line-2); padding:8px 12px; cursor:pointer;}
+  button:hover{border-color:var(--ink);}
+  button.on{background:var(--ink); color:var(--bg); border-color:var(--ink);}
+  button.mk{color:var(--accent); border-color:var(--accent);}
+  button.mk.on{background:var(--accent); color:#fff;}
+  input[type=range]{flex:1; min-width:160px; accent-color:var(--accent);}
+  .ticks{display:flex; justify-content:space-between; font-family:var(--mono); font-size:.58rem;
+    letter-spacing:.1em; color:var(--muted); text-transform:uppercase; margin-top:2px;}
+  .ticks b{color:var(--accent); font-weight:700;}
+
+  .laws{border:1px solid var(--line); background:var(--bg);}
+  .laws .law{padding:14px 16px; border-bottom:1px solid var(--line);}
+  .laws .law:last-child{border-bottom:0;}
+  .laws .law.hot{background:var(--surface); box-shadow:inset 3px 0 0 var(--accent);}
+  .laws .k{font-family:var(--mono); font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
+  .laws p{margin:6px 0 0; font-size:.88rem;}
+  .laws p b{font-weight:700;}
+  .laws .src{font-family:var(--mono); font-size:.6rem; color:var(--muted); letter-spacing:.06em; display:block; margin-top:6px; text-transform:uppercase;}
+  .foot{margin:26px 0 60px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tag">
+    <span class="lbl">Contact Lab — string → ball, in 3D</span>
+    <span class="lbl"><a href="index.html" style="text-decoration:none">← Serve Lab</a> · J. Shi · MMXXVI</span>
+  </div>
+
+  <h1>Hit. <span class="accent">Hook.</span> Release.</h1>
+  <p class="sub">Suzuki's contact, drawn in real 3D — drag to orbit, scrub the swing. <b>Thin face, ball hooked on 2–3 strings slightly off-center, rotation only AFTER release.</b> Geometric storyboard of the sourced doctrine (not a physics sim). Red = everything that matters.</p>
+
+  <div class="lab">
+    <div>
+      <div id="stage">
+        <canvas id="c"></canvas>
+        <div id="phase">approach</div>
+        <div id="viewtag">drag to orbit · wheel to zoom</div>
+      </div>
+      <div class="row">
+        <button id="play" class="mk on">Pause</button>
+        <button data-speed="0.12">0.1×</button>
+        <button data-speed="0.35" class="spd on">0.35×</button>
+        <button data-speed="1">1×</button>
+        <input type="range" id="scrub" min="0" max="1000" value="0">
+      </div>
+      <div class="ticks"><span>drop</span><b>hit</b><b>hook</b><b>release</b><span>pronate</span><span>out</span></div>
+      <div class="row">
+        <span class="lbl">Serve</span>
+        <button id="m-slice" class="mode on">Suzuki slice</button>
+        <button id="m-kick" class="mode">Kick</button>
+        <span class="lbl" style="margin-left:14px">View</span>
+        <button data-view="behind" class="vw on">Behind</button>
+        <button data-view="above" class="vw">Above</button>
+        <button data-view="side" class="vw">Side</button>
+        <button data-view="ball" class="vw">Ball's view</button>
+      </div>
+    </div>
+
+    <div class="laws" id="laws">
+      <div class="law" data-ph="approach"><span class="k">Approach — edge first</span>
+        <p><b>The face stays thin to the path.</b> "A thick strike = little spin… the skill is how thin you can contact and still send it." Squared face here = your flat serve.</p>
+        <span class="src">Suzuki, 63CUBskGWms</span></div>
+      <div class="law" data-ph="hit"><span class="k">Hit — off-center, upper-right</span>
+        <p>Strike the ball's <b>upper-right, "at the index finger,"</b> and <b>not the middle of the strings</b> — "slightly off-center, edge leaning in." Dead middle + square face = slice won't take.</p>
+        <span class="src">Suzuki, 63CUBskGWms</span></div>
+      <div class="law" data-ph="hook"><span class="k">Hook — 2–3 strings carry it</span>
+        <p>"Hook it on <b>two or three strings</b> and it naturally grips and goes." This is the FEEL you're missing — the ball rides the bed for a beat. 当たって→引っかかって→離れていく.</p>
+        <span class="src">Suzuki, 63CUBskGWms</span></div>
+      <div class="law" data-ph="release"><span class="k">Release → rotation AFTER</span>
+        <p><b>"The ball must contact BEFORE the rotation.</b> Use the rotation first and it's flat." Pronation is the exhaust, not the engine — watch it fire only after the ball leaves.</p>
+        <span class="src">Suzuki 63CUBskGWms · Kovacs long-axis</span></div>
+      <div class="law" data-ph="out"><span class="k">Finish — ignore it</span>
+        <p>"The finish doesn't really matter — ball's gone." It only diagnoses: out-to-the-right and unwrapped = you held side-on. Kick note: <b>contact at full extension = hitting down = no kick; keep the shape diagonal, tilt the body.</b></p>
+        <span class="src">Kovacs congress · Suzuki wrFTOI58mjA</span></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span class="lbl">Setup law: build the contact wrist-shape at address — then just reproduce it (Suzuki)</span>
+    <span class="lbl accent">thin beats thick · hook beats hit</span>
+  </div>
+</div>
+
+<script src="three.min.js"></script>
+<script>
+(() => {
+  const css = k => getComputedStyle(document.documentElement).getPropertyValue(k).trim();
+  let INK = css('--ink'), ACC = css('--accent'), MUT = css('--muted'), SUR = css('--surface');
+
+  const stage = document.getElementById('stage'), canvas = document.getElementById('c');
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, 16/10, 0.05, 100);
+
+  // lighting: soft studio
+  scene.add(new THREE.AmbientLight(0xffffff, 1.15));
+  const key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(2,4,3); scene.add(key);
+  const rim = new THREE.DirectionalLight(0xffffff, 0.6); rim.position.set(-3,2,-2); scene.add(rim);
+
+  const inkM = c => new THREE.MeshStandardMaterial({color:new THREE.Color(c), roughness:.55, metalness:.1});
+  const COL_INK = () => new THREE.Color(INK), COL_ACC = () => new THREE.Color(ACC);
+
+  // ---------- racket ----------
+  const racket = new THREE.Group();
+  const headR = 0.34, headS = 0.86;            // ellipse: x=headR, y=headR/headS
+  const frame = new THREE.Mesh(new THREE.TorusGeometry(headR, 0.021, 18, 72), inkM(INK));
+  frame.scale.y = 1/headS; racket.add(frame);
+  // strings
+  const strGrp = new THREE.Group();
+  const strMat = new THREE.LineBasicMaterial({color:new THREE.Color(MUT), transparent:true, opacity:.75});
+  const rx = headR*0.965, ry = headR/headS*0.965;
+  for(let i=-7;i<=7;i++){ const x=i*rx/7.6, h=ry*Math.sqrt(Math.max(0,1-(x*x)/(rx*rx)));
+    strGrp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x,-h,0),new THREE.Vector3(x,h,0)]),strMat)); }
+  for(let j=-9;j<=9;j++){ const y=j*ry/9.6, w=rx*Math.sqrt(Math.max(0,1-(y*y)/(ry*ry)));
+    strGrp.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-w,y,0),new THREE.Vector3(w,y,0)]),strMat)); }
+  racket.add(strGrp);
+  // hook zone: 2-3 strings, slightly off-center (leading/lower-right of bed)
+  const hook = new THREE.Mesh(new THREE.PlaneGeometry(0.085,0.17), new THREE.MeshBasicMaterial({color:COL_ACC(), transparent:true, opacity:.8, side:THREE.DoubleSide}));
+  hook.position.set(0.075,-0.045,0.002); racket.add(hook);
+  // throat + handle
+  const mkCyl=(a,b,r)=>{const d=new THREE.Vector3().subVectors(b,a); const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,d.length(),10),inkM(INK));
+    m.position.copy(a).add(d.clone().multiplyScalar(.5)); m.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d.clone().normalize()); return m;};
+  const yB=-ry-0.005;
+  racket.add(mkCyl(new THREE.Vector3(-0.10,yB+0.03,0), new THREE.Vector3(0,yB-0.24,0), 0.016));
+  racket.add(mkCyl(new THREE.Vector3( 0.10,yB+0.03,0), new THREE.Vector3(0,yB-0.24,0), 0.016));
+  const grip = mkCyl(new THREE.Vector3(0,yB-0.24,0), new THREE.Vector3(0,yB-0.62,0), 0.024); grip.material=inkM(MUT); racket.add(grip);
+  scene.add(racket);
+
+  // ---------- ball ----------
+  const ball = new THREE.Group();
+  const sph = new THREE.Mesh(new THREE.SphereGeometry(0.105,28,20), new THREE.MeshStandardMaterial({color:new THREE.Color('#C9C3B4'), roughness:.9}));
+  ball.add(sph);
+  const seamM = new THREE.LineBasicMaterial({color:new THREE.Color(INK), transparent:true, opacity:.6});
+  [[1,0.35],[ -1,0.35]].forEach(([s,t])=>{ const pts=[]; for(let i=0;i<=64;i++){const a=i/64*Math.PI*2;
+    pts.push(new THREE.Vector3(Math.cos(a)*0.105, Math.sin(a)*0.105*t*s + Math.sin(a*2)*0.02, Math.sin(a)*0.105*Math.sqrt(1-t*t)));}
+    ball.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), seamM)); });
+  // strike point dot (upper-right-outer quadrant)
+  const dot = new THREE.Mesh(new THREE.SphereGeometry(0.016,10,10), new THREE.MeshBasicMaterial({color:COL_ACC()}));
+  ball.add(dot);
+  scene.add(ball);
+  // spin axis
+  const axis = new THREE.ArrowHelper(new THREE.Vector3(0,1,0), new THREE.Vector3(), 0.34, COL_ACC().getHex(), 0.09, 0.05);
+  ball.add(axis);
+
+  // trail of face center
+  const TRAILN=140; const trailPos=new Float32Array(TRAILN*3);
+  const trailGeo=new THREE.BufferGeometry(); trailGeo.setAttribute('position', new THREE.BufferAttribute(trailPos,3));
+  const trail=new THREE.Line(trailGeo, new THREE.LineBasicMaterial({color:COL_ACC(), transparent:true, opacity:.9}));
+  trail.frustumCulled=false; scene.add(trail);
+  // faint ground reference
+  const g=new THREE.GridHelper(6,12,new THREE.Color(MUT),new THREE.Color(MUT));
+  g.material.transparent=true; g.material.opacity=.12; g.position.y=0; scene.add(g);
+
+  // ---------- choreography ----------
+  const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+  const MODES={
+    slice:{
+      contact:V(0.34,2.58,-0.02),
+      path:[V(0.05,1.30,0.72),V(0.10,1.75,0.55),V(0.20,2.22,0.28),V(0.34,2.58,-0.02),V(0.66,2.86,-0.28),V(1.02,2.96,-0.5),V(1.30,2.80,-0.66)],
+      dep:V(-0.28,0.10,-1).normalize(), spinAxis:V(0.25,1,-0.12).normalize(), spinRate:22,
+      dotDir:V(0.55,0.62,0.55),   // upper-right of ball (faces incoming strings)
+      openA:1.05, thinA:0.42, pronA:-1.15, // face yaw around path: open→thin→pronated-through
+      camT:V(0.34,2.45,-0.02)
+    },
+    kick:{
+      contact:V(-0.10,2.44,0.14),
+      path:[V(-0.85,1.35,0.66),V(-0.62,1.82,0.5),V(-0.34,2.18,0.3),V(-0.10,2.44,0.14),V(0.34,2.78,-0.10),V(0.82,3.02,-0.3),V(1.18,3.02,-0.46)],
+      dep:V(0.14,0.34,-1).normalize(), spinAxis:V(1,0.35,0.15).normalize(), spinRate:30,
+      dotDir:V(-0.35,0.45,0.82),  // back-upper-left of ball
+      openA:1.0, thinA:0.5, pronA:-1.05,
+      camT:V(-0.05,2.4,0.05)
+    }
+  };
+  let mode=MODES.slice, modeName='slice';
+  let curve=new THREE.CatmullRomCurve3(mode.path);
+
+  const PH={hit:0.50, rel:0.585, pron:0.75};
+  const phaseName=t=> t<PH.hit?'approach — edge first':t<PH.rel?'HOOK — ball riding 2–3 strings':t<PH.pron?'release → pronation fires':'out — finish is diagnostics';
+  const phaseKey=t=> t<PH.hit-0.04?'approach':t<PH.hit+0.01?'hit':t<PH.rel?'hook':t<PH.pron?'release':'out';
+
+  function pose(t){
+    // racket position along curve; during hook, crawl with the ball
+    const u = t<PH.hit ? THREE.MathUtils.mapLinear(t,0,PH.hit,0,0.5)
+            : t<PH.rel ? THREE.MathUtils.mapLinear(t,PH.hit,PH.rel,0.5,0.565)
+            : THREE.MathUtils.mapLinear(t,PH.rel,1,0.565,1);
+    const p=curve.getPointAt(Math.min(u,0.999));
+    const tan=curve.getTangentAt(Math.min(u,0.999));
+    // orient: bed center at p; racket local +z is face normal; local up follows path
+    racket.position.copy(p);
+    const m=new THREE.Matrix4().lookAt(p, p.clone().add(tan), V(0,1,0));
+    racket.quaternion.setFromRotationMatrix(m);
+    // face angle vs path: open early → thin at contact → pronate AFTER release
+    let a;
+    if(t<PH.hit) a=THREE.MathUtils.lerp(mode.openA, mode.thinA, THREE.MathUtils.smoothstep(t,0.12,PH.hit));
+    else if(t<PH.rel) a=mode.thinA;                       // thin THROUGH the hook
+    else a=THREE.MathUtils.lerp(mode.thinA, mode.pronA, THREE.MathUtils.smoothstep(t,PH.rel,PH.pron+0.06));
+    racket.rotateY(a);
+    // ball: waits at contact point, carried tiny bit during hook, departs after release
+    if(t<PH.hit){ ball.position.copy(mode.contact); axis.visible=false; }
+    else if(t<PH.rel){ const k=THREE.MathUtils.mapLinear(t,PH.hit,PH.rel,0,1);
+      ball.position.copy(mode.contact).add(mode.dep.clone().multiplyScalar(0.05*k)); axis.visible=false; }
+    else { const k=THREE.MathUtils.mapLinear(t,PH.rel,1,0,1);
+      ball.position.copy(mode.contact).add(mode.dep.clone().multiplyScalar(0.05+2.6*k*k+1.2*k));
+      axis.visible=true; axis.setDirection(mode.spinAxis);
+      ball.rotateOnWorldAxis(mode.spinAxis, 0.0); }
+    dot.position.copy(mode.dotDir).multiplyScalar(0.105);
+    document.getElementById('phase').textContent=phaseName(t);
+    const k=phaseKey(t);
+    document.querySelectorAll('#laws .law').forEach(el=>el.classList.toggle('hot', el.dataset.ph===k));
+  }
+
+  // trail update
+  let trailIdx=0, lastT=-1;
+  function pushTrail(){ const p=racket.position;
+    if(trailIdx<TRAILN){ trailPos.set([p.x,p.y,p.z], trailIdx*3); trailIdx++;
+      for(let i=trailIdx;i<TRAILN;i++) trailPos.set([p.x,p.y,p.z], i*3); }
+    else { trailPos.copyWithin(0,3); trailPos.set([p.x,p.y,p.z],(TRAILN-1)*3); }
+    trailGeo.attributes.position.needsUpdate=true; }
+  function resetTrail(){ trailIdx=0; }
+
+  // ---------- camera / orbit ----------
+  let az=0.0, el=0.28, rad=3.4, target=mode.camT.clone();
+  const VIEWS={behind:[0.0,0.26,3.4], above:[0.0,1.35,3.2], side:[1.5,0.2,3.2], ball:[-0.5,0.05,1.15]};
+  function setView(n){ const v=VIEWS[n]; az=v[0]; el=v[1]; rad=v[2];
+    document.querySelectorAll('.vw').forEach(b=>b.classList.toggle('on', b.dataset.view===n)); }
+  function camUpdate(){ target.lerp(mode.camT,0.12);
+    camera.position.set(target.x+rad*Math.sin(az)*Math.cos(el), target.y+rad*Math.sin(el), target.z+rad*Math.cos(az)*Math.cos(el));
+    camera.lookAt(target); }
+  let drag=false,px=0,py=0;
+  canvas.addEventListener('pointerdown',e=>{drag=true;px=e.clientX;py=e.clientY;canvas.setPointerCapture(e.pointerId);canvas.style.cursor='grabbing';});
+  canvas.addEventListener('pointermove',e=>{if(!drag)return; az-= (e.clientX-px)*0.006; el=THREE.MathUtils.clamp(el+(e.clientY-py)*0.005,-0.1,1.3); px=e.clientX;py=e.clientY;});
+  canvas.addEventListener('pointerup',()=>{drag=false;canvas.style.cursor='grab';});
+  canvas.addEventListener('wheel',e=>{e.preventDefault(); rad=THREE.MathUtils.clamp(rad+e.deltaY*0.002,1.2,8);},{passive:false});
+
+  // ---------- controls ----------
+  let t=0, playing=true, speed=0.35;
+  const scrub=document.getElementById('scrub'), playBtn=document.getElementById('play');
+  playBtn.onclick=()=>{playing=!playing; playBtn.textContent=playing?'Pause':'Play'; playBtn.classList.toggle('on',playing);};
+  document.querySelectorAll('[data-speed]').forEach(b=>b.onclick=()=>{speed=parseFloat(b.dataset.speed);
+    document.querySelectorAll('[data-speed]').forEach(x=>x.classList.toggle('on',x===b));});
+  scrub.addEventListener('input',()=>{t=scrub.value/1000; playing=false; playBtn.textContent='Play'; playBtn.classList.remove('on'); resetTrail(); preroll(); pose(t);});
+  document.getElementById('m-slice').onclick=()=>setMode('slice');
+  document.getElementById('m-kick').onclick=()=>setMode('kick');
+  function setMode(n){ modeName=n; mode=MODES[n]; curve=new THREE.CatmullRomCurve3(mode.path);
+    document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('on', b.id==='m-'+n));
+    t=0; resetTrail(); pose(0); }
+  document.querySelectorAll('.vw').forEach(b=>b.onclick=()=>setView(b.dataset.view));
+  function preroll(){ // rebuild trail up to t so scrubbing keeps the tail
+    const steps=60; resetTrail();
+    for(let i=0;i<=steps;i++){ pose(t*i/steps); pushTrail(); } }
+
+  // ---------- resize + loop ----------
+  function resize(){ const w=stage.clientWidth,h=stage.clientHeight;
+    renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+  new ResizeObserver(resize).observe(stage); resize();
+
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ playing=false; t=0.55; preroll(); pose(t); playBtn.textContent='Play'; playBtn.classList.remove('on'); }
+
+  let last=performance.now();
+  function loop(now){ const dt=(now-last)/1000; last=now;
+    if(playing){ t+=dt*0.22*speed; if(t>1.15){t=0; resetTrail();} const tc=Math.min(t,1);
+      scrub.value=Math.round(tc*1000); pose(tc); pushTrail();
+      if(tc>PH.rel) ball.rotateOnWorldAxis(mode.spinAxis, dt*mode.spinRate*speed); }
+    camUpdate(); renderer.render(scene,camera); requestAnimationFrame(loop); }
+  pose(0); requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

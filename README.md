@@ -3,7 +3,12 @@
 A compact literature review and experiment ledger for tennis and table-tennis
 computer vision.
 
-**Live site:** https://jerry-tennis-contact-evidence.jshi392999.chatgpt.site
+**Canonical live site:** https://jerryshi042003.github.io/tennis-cv/
+
+This repository is now the single source-controlled Tennis CV deployment. It
+contains the research log plus routes for visual evidence, the route ledger,
+Serve Motion Lab, Tennis Motion Lab, Practice Court, Mark Kovacs, and Roman
+Prokes. Noah coaching and UCLA Match Viewer remain separate products.
 
 The page starts with the TT3D ping-pong reconstruction because it most clearly
 shows the full evidence chain: observation, calibration, physical fitting,
