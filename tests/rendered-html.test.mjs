@@ -47,18 +47,28 @@ test("ships the ping-pong demo and representative evidence cuts", async () => {
   await Promise.all(required.map((path) => access(new URL(path, root))));
 });
 
-test("ships the reviewed Alcaraz racket arm as a real moving video", async () => {
+test("ships both real moving Alcaraz videos on the minimal Motion Lab", async () => {
   const root = new URL("../public/motion-lab/", import.meta.url);
-  const [html, audit] = await Promise.all([
+  const [html, audit, traceAudit] = await Promise.all([
     readFile(new URL("index.html", root), "utf8"),
     readFile(new URL("alcaraz-racket-arm-reviewed.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("alcaraz-motion-trace.json", root), "utf8").then(JSON.parse),
     access(new URL("alcaraz-racket-arm-reviewed.mp4", root)),
     access(new URL("alcaraz-racket-arm-reviewed.jpg", root)),
+    access(new URL("alcaraz-motion-trace.mp4", root)),
+    access(new URL("alcaraz-motion-trace.jpg", root)),
   ]);
-  assert.match(html, /Real moving result · one Alcaraz serve/);
+  assert.match(html, /One real Alcaraz serve → one dark arm-and-racket trace/);
+  assert.match(html, /alcaraz-motion-trace\.mp4/);
   assert.match(html, /alcaraz-racket-arm-reviewed\.mp4/);
+  assert.doesNotMatch(html, /What the literature says|What this project tested|Next falsifiable experiment/);
   assert.equal(audit.frames, 76);
   assert.equal(audit.transport.decoded_frames, 76);
   assert.equal(audit.transport.exact_duplicate_transitions, 0);
   assert.equal(audit.verdict, "PASS_HUMAN_REVIEWED_SOURCE_CAMERA_RACKET_ARM");
+  assert.equal(traceAudit.frames, 76);
+  assert.equal(traceAudit.arm_frames, 76);
+  assert.equal(traceAudit.racket_frames, 76);
+  assert.equal(traceAudit.exact_duplicate_transitions, 0);
+  assert.equal(traceAudit.verdict, "PASS_MINIMAL_SOURCE_CAMERA_MOTION_TRACE");
 });
