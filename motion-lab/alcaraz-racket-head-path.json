@@ -1,0 +1,940 @@
+{
+  "verdict": "PARTIAL_OBJECT_ONLY_PATH__76_OF_76_ON_HEAD__TWO_DISCONTINUITIES",
+  "evidence_class": "SOURCE_CAMERA_2D_RACKET_OBJECT_PATH",
+  "frames": 76,
+  "fps": 30,
+  "centers_produced": 76,
+  "human_visual_centers_on_displayed_head": 76,
+  "human_review": "All 76 enlarged frames inspected across ten sequential sheets. Every marker remains inside the displayed racket head; the unsmoothed path has two preregistered discontinuities at frames 132 and 139.",
+  "maximum_step_diameters": 2.805708466680029,
+  "discontinuity_frames": [
+    132,
+    139
+  ],
+  "exact_duplicate_transitions": 0,
+  "minimum_changed_channel_values": 150876,
+  "video_sha256": "d7910b0d2d71585cd90aaebdca39dc4cf4cf31e7a4c5a74fc0aaba1ef6c3040d",
+  "unsupported": [
+    "3D",
+    "racket-face orientation",
+    "pronation",
+    "grip",
+    "contact",
+    "force",
+    "spin"
+  ],
+  "rows": [
+    {
+      "frame": 90,
+      "center": [
+        363,
+        371
+      ],
+      "equivalent_diameter": 40.005775929634204,
+      "step_pixels": 0.0,
+      "step_diameters": 0.0,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1214
+    },
+    {
+      "frame": 91,
+      "center": [
+        360,
+        374
+      ],
+      "equivalent_diameter": 40.37800437160529,
+      "step_pixels": 4.242640687119285,
+      "step_diameters": 0.10605070364293463,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1180
+    },
+    {
+      "frame": 92,
+      "center": [
+        355,
+        375
+      ],
+      "equivalent_diameter": 42.272824616244904,
+      "step_pixels": 5.0990195135927845,
+      "step_diameters": 0.12628210811672821,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1038
+    },
+    {
+      "frame": 93,
+      "center": [
+        351,
+        377
+      ],
+      "equivalent_diameter": 43.09315347008425,
+      "step_pixels": 4.47213595499958,
+      "step_diameters": 0.10579221983858147,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1120
+    },
+    {
+      "frame": 94,
+      "center": [
+        349,
+        379
+      ],
+      "equivalent_diameter": 47.40535620009159,
+      "step_pixels": 2.8284271247461903,
+      "step_diameters": 0.0656351855686244,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1202
+    },
+    {
+      "frame": 95,
+      "center": [
+        344,
+        379
+      ],
+      "equivalent_diameter": 50.01915338552418,
+      "step_pixels": 5.0,
+      "step_diameters": 0.10547331358287189,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1153
+    },
+    {
+      "frame": 96,
+      "center": [
+        343,
+        384
+      ],
+      "equivalent_diameter": 50.85223215707562,
+      "step_pixels": 5.0990195135927845,
+      "step_diameters": 0.10194133983620102,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1379
+    },
+    {
+      "frame": 97,
+      "center": [
+        340,
+        384
+      ],
+      "equivalent_diameter": 55.85191925620058,
+      "step_pixels": 3.0,
+      "step_diameters": 0.05899446047389638,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1527
+    },
+    {
+      "frame": 98,
+      "center": [
+        335,
+        382
+      ],
+      "equivalent_diameter": 60.392008377713964,
+      "step_pixels": 5.385164807134504,
+      "step_diameters": 0.09641861692222246,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1824
+    },
+    {
+      "frame": 99,
+      "center": [
+        336,
+        387
+      ],
+      "equivalent_diameter": 59.39284602280622,
+      "step_pixels": 5.0990195135927845,
+      "step_diameters": 0.08443202421256848,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1827
+    },
+    {
+      "frame": 100,
+      "center": [
+        336,
+        396
+      ],
+      "equivalent_diameter": 56.24944682987451,
+      "step_pixels": 9.0,
+      "step_diameters": 0.1515334017929381,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1740
+    },
+    {
+      "frame": 101,
+      "center": [
+        330,
+        397
+      ],
+      "equivalent_diameter": 60.618226022423976,
+      "step_pixels": 6.082762530298219,
+      "step_diameters": 0.10813906399285012,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1753
+    },
+    {
+      "frame": 102,
+      "center": [
+        327,
+        397
+      ],
+      "equivalent_diameter": 66.42119407619332,
+      "step_pixels": 3.0,
+      "step_diameters": 0.04949006589025281,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2077
+    },
+    {
+      "frame": 103,
+      "center": [
+        326,
+        403
+      ],
+      "equivalent_diameter": 77.17239124517734,
+      "step_pixels": 6.082762530298219,
+      "step_diameters": 0.09157863863935567,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2451
+    },
+    {
+      "frame": 104,
+      "center": [
+        326,
+        403
+      ],
+      "equivalent_diameter": 80.54287976243246,
+      "step_pixels": 0.0,
+      "step_diameters": 0.0,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2704
+    },
+    {
+      "frame": 105,
+      "center": [
+        325,
+        402
+      ],
+      "equivalent_diameter": 77.88268864849438,
+      "step_pixels": 1.4142135623730951,
+      "step_diameters": 0.017558517482171347,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2675
+    },
+    {
+      "frame": 106,
+      "center": [
+        323,
+        404
+      ],
+      "equivalent_diameter": 72.52415155864257,
+      "step_pixels": 2.8284271247461903,
+      "step_diameters": 0.036316505937688495,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2454
+    },
+    {
+      "frame": 107,
+      "center": [
+        323,
+        403
+      ],
+      "equivalent_diameter": 74.04007603897529,
+      "step_pixels": 1.0,
+      "step_diameters": 0.013788510151565252,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2465
+    },
+    {
+      "frame": 108,
+      "center": [
+        323,
+        402
+      ],
+      "equivalent_diameter": 75.88297464560002,
+      "step_pixels": 1.0,
+      "step_diameters": 0.013506198987067383,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2487
+    },
+    {
+      "frame": 109,
+      "center": [
+        324,
+        400
+      ],
+      "equivalent_diameter": 78.76458393035591,
+      "step_pixels": 2.23606797749979,
+      "step_diameters": 0.029467321068302976,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2632
+    },
+    {
+      "frame": 110,
+      "center": [
+        326,
+        396
+      ],
+      "equivalent_diameter": 78.70394135706653,
+      "step_pixels": 4.47213595499958,
+      "step_diameters": 0.05677851303009316,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2592
+    },
+    {
+      "frame": 111,
+      "center": [
+        332,
+        386
+      ],
+      "equivalent_diameter": 74.17323016291415,
+      "step_pixels": 11.661903789690601,
+      "step_diameters": 0.14817433013656214,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 3469
+    },
+    {
+      "frame": 112,
+      "center": [
+        337,
+        377
+      ],
+      "equivalent_diameter": 73.4400620335941,
+      "step_pixels": 10.295630140987,
+      "step_diameters": 0.13880520126160972,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 3099
+    },
+    {
+      "frame": 113,
+      "center": [
+        343,
+        365
+      ],
+      "equivalent_diameter": 69.91399439481548,
+      "step_pixels": 13.416407864998739,
+      "step_diameters": 0.18268513796817867,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2366
+    },
+    {
+      "frame": 114,
+      "center": [
+        344,
+        355
+      ],
+      "equivalent_diameter": 74.97992537858458,
+      "step_pixels": 10.04987562112089,
+      "step_diameters": 0.14374626579576671,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2418
+    },
+    {
+      "frame": 115,
+      "center": [
+        350,
+        339
+      ],
+      "equivalent_diameter": 70.91304239652622,
+      "step_pixels": 17.08800749063506,
+      "step_diameters": 0.22790110025257052,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2064
+    },
+    {
+      "frame": 116,
+      "center": [
+        353,
+        322
+      ],
+      "equivalent_diameter": 70.91753098990328,
+      "step_pixels": 17.26267650163207,
+      "step_diameters": 0.2434344362931706,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2298
+    },
+    {
+      "frame": 117,
+      "center": [
+        350,
+        304
+      ],
+      "equivalent_diameter": 70.6071486282411,
+      "step_pixels": 18.24828759089466,
+      "step_diameters": 0.2573170178963607,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2019
+    },
+    {
+      "frame": 118,
+      "center": [
+        348,
+        287
+      ],
+      "equivalent_diameter": 70.83219907661281,
+      "step_pixels": 17.11724276862369,
+      "step_diameters": 0.24242931631114215,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2215
+    },
+    {
+      "frame": 119,
+      "center": [
+        344,
+        268
+      ],
+      "equivalent_diameter": 68.474116449117,
+      "step_pixels": 19.4164878389476,
+      "step_diameters": 0.27411951191782896,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2235
+    },
+    {
+      "frame": 120,
+      "center": [
+        336,
+        251
+      ],
+      "equivalent_diameter": 66.36366163224365,
+      "step_pixels": 18.788294228055936,
+      "step_diameters": 0.27438534737454384,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2148
+    },
+    {
+      "frame": 121,
+      "center": [
+        348,
+        235
+      ],
+      "equivalent_diameter": 63.686733312362634,
+      "step_pixels": 20.0,
+      "step_diameters": 0.30136974826420276,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1605
+    },
+    {
+      "frame": 122,
+      "center": [
+        320,
+        212
+      ],
+      "equivalent_diameter": 56.2720778695469,
+      "step_pixels": 36.235341863986875,
+      "step_diameters": 0.5689621680902419,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2525
+    },
+    {
+      "frame": 123,
+      "center": [
+        299,
+        208
+      ],
+      "equivalent_diameter": 61.54581744998688,
+      "step_pixels": 21.37755832643195,
+      "step_diameters": 0.37989637375734747,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2700
+    },
+    {
+      "frame": 124,
+      "center": [
+        280,
+        200
+      ],
+      "equivalent_diameter": 58.91933145174359,
+      "step_pixels": 20.615528128088304,
+      "step_diameters": 0.3349622928453394,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1928
+    },
+    {
+      "frame": 125,
+      "center": [
+        259,
+        199
+      ],
+      "equivalent_diameter": 59.36604298609543,
+      "step_pixels": 21.02379604162864,
+      "step_diameters": 0.3568233977476078,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1922
+    },
+    {
+      "frame": 126,
+      "center": [
+        235,
+        200
+      ],
+      "equivalent_diameter": 52.36943745506095,
+      "step_pixels": 24.020824298928627,
+      "step_diameters": 0.4046222906343063,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1458
+    },
+    {
+      "frame": 127,
+      "center": [
+        200,
+        228
+      ],
+      "equivalent_diameter": 34.64101615137755,
+      "step_pixels": 44.82186966202994,
+      "step_diameters": 0.8558783870934704,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 981
+    },
+    {
+      "frame": 128,
+      "center": [
+        200,
+        258
+      ],
+      "equivalent_diameter": 29.664793948382652,
+      "step_pixels": 30.0,
+      "step_diameters": 0.8660254037844386,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 815
+    },
+    {
+      "frame": 129,
+      "center": [
+        202,
+        295
+      ],
+      "equivalent_diameter": 66.09084656743322,
+      "step_pixels": 37.05401462729781,
+      "step_diameters": 1.2490905782717572,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1443
+    },
+    {
+      "frame": 130,
+      "center": [
+        245,
+        293
+      ],
+      "equivalent_diameter": 70.09133172768674,
+      "step_pixels": 43.04648650006177,
+      "step_diameters": 0.6513229703623324,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2197
+    },
+    {
+      "frame": 131,
+      "center": [
+        250,
+        245
+      ],
+      "equivalent_diameter": 31.74901573277509,
+      "step_pixels": 48.25971404805462,
+      "step_diameters": 0.6885261395167868,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1102
+    },
+    {
+      "frame": 132,
+      "center": [
+        268,
+        160
+      ],
+      "equivalent_diameter": 35.32704346531139,
+      "step_pixels": 86.88498144098322,
+      "step_diameters": 2.7366196852298095,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 904
+    },
+    {
+      "frame": 133,
+      "center": [
+        268,
+        112
+      ],
+      "equivalent_diameter": 34.64101615137755,
+      "step_pixels": 48.0,
+      "step_diameters": 1.3587324409735149,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1071
+    },
+    {
+      "frame": 134,
+      "center": [
+        328,
+        98
+      ],
+      "equivalent_diameter": 36.66060555964672,
+      "step_pixels": 61.61168720299745,
+      "step_diameters": 1.7785762095938797,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1056
+    },
+    {
+      "frame": 135,
+      "center": [
+        380,
+        150
+      ],
+      "equivalent_diameter": 37.94733192202055,
+      "step_pixels": 73.53910524340094,
+      "step_diameters": 2.0059435495071947,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1133
+    },
+    {
+      "frame": 136,
+      "center": [
+        378,
+        228
+      ],
+      "equivalent_diameter": 34.64101615137755,
+      "step_pixels": 78.02563681252464,
+      "step_diameters": 2.0561560684388183,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1004
+    },
+    {
+      "frame": 137,
+      "center": [
+        355,
+        290
+      ],
+      "equivalent_diameter": 37.416573867739416,
+      "step_pixels": 66.12866246946176,
+      "step_diameters": 1.9089700538946823,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1048
+    },
+    {
+      "frame": 138,
+      "center": [
+        310,
+        348
+      ],
+      "equivalent_diameter": 38.72983346207417,
+      "step_pixels": 73.40980860893181,
+      "step_diameters": 1.9619596617376498,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1173
+    },
+    {
+      "frame": 139,
+      "center": [
+        202,
+        360
+      ],
+      "equivalent_diameter": 49.63869458396343,
+      "step_pixels": 108.664621657649,
+      "step_diameters": 2.805708466680029,
+      "source": "reviewed_manual_ellipse_center",
+      "segmented_pixels": 1726
+    },
+    {
+      "frame": 140,
+      "center": [
+        266,
+        351
+      ],
+      "equivalent_diameter": 52.436254603619275,
+      "step_pixels": 64.6297145282261,
+      "step_diameters": 1.3020027031312336,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1449
+    },
+    {
+      "frame": 141,
+      "center": [
+        258,
+        350
+      ],
+      "equivalent_diameter": 58.43108624017989,
+      "step_pixels": 8.06225774829855,
+      "step_diameters": 0.1537535014513045,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1590
+    },
+    {
+      "frame": 142,
+      "center": [
+        238,
+        355
+      ],
+      "equivalent_diameter": 54.90930014062158,
+      "step_pixels": 20.615528128088304,
+      "step_diameters": 0.35281781419138025,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1525
+    },
+    {
+      "frame": 143,
+      "center": [
+        242,
+        356
+      ],
+      "equivalent_diameter": 62.35762639502234,
+      "step_pixels": 4.123105625617661,
+      "step_diameters": 0.0750893858610194,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 2070
+    },
+    {
+      "frame": 144,
+      "center": [
+        240,
+        357
+      ],
+      "equivalent_diameter": 62.281010533192806,
+      "step_pixels": 2.23606797749979,
+      "step_diameters": 0.03585877312479428,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1830
+    },
+    {
+      "frame": 145,
+      "center": [
+        242,
+        356
+      ],
+      "equivalent_diameter": 61.56133124701099,
+      "step_pixels": 2.23606797749979,
+      "step_diameters": 0.03590288529933329,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1895
+    },
+    {
+      "frame": 146,
+      "center": [
+        243,
+        354
+      ],
+      "equivalent_diameter": 60.254813598685345,
+      "step_pixels": 2.23606797749979,
+      "step_diameters": 0.03632260596392412,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1859
+    },
+    {
+      "frame": 147,
+      "center": [
+        247,
+        352
+      ],
+      "equivalent_diameter": 57.02502781457985,
+      "step_pixels": 4.47213595499958,
+      "step_diameters": 0.0742203931587161,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1615
+    },
+    {
+      "frame": 148,
+      "center": [
+        251,
+        349
+      ],
+      "equivalent_diameter": 56.717190601910005,
+      "step_pixels": 5.0,
+      "step_diameters": 0.08768079896879291,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1719
+    },
+    {
+      "frame": 149,
+      "center": [
+        256,
+        345
+      ],
+      "equivalent_diameter": 56.033996085563196,
+      "step_pixels": 6.4031242374328485,
+      "step_diameters": 0.11289565243764414,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1576
+    },
+    {
+      "frame": 150,
+      "center": [
+        261,
+        341
+      ],
+      "equivalent_diameter": 56.98594088761747,
+      "step_pixels": 6.4031242374328485,
+      "step_diameters": 0.114272132718419,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1706
+    },
+    {
+      "frame": 151,
+      "center": [
+        265,
+        342
+      ],
+      "equivalent_diameter": 53.04582352895192,
+      "step_pixels": 4.123105625617661,
+      "step_diameters": 0.07235303236896408,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1432
+    },
+    {
+      "frame": 152,
+      "center": [
+        267,
+        342
+      ],
+      "equivalent_diameter": 49.725558778918575,
+      "step_pixels": 2.0,
+      "step_diameters": 0.03770325101859185,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1155
+    },
+    {
+      "frame": 153,
+      "center": [
+        275,
+        339
+      ],
+      "equivalent_diameter": 52.87151804578766,
+      "step_pixels": 8.54400374531753,
+      "step_diameters": 0.17182318218492917,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1440
+    },
+    {
+      "frame": 154,
+      "center": [
+        278,
+        339
+      ],
+      "equivalent_diameter": 49.89809545192693,
+      "step_pixels": 3.0,
+      "step_diameters": 0.056741325214115235,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1267
+    },
+    {
+      "frame": 155,
+      "center": [
+        281,
+        336
+      ],
+      "equivalent_diameter": 49.2689678401891,
+      "step_pixels": 4.242640687119285,
+      "step_diameters": 0.08502610467781783,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1398
+    },
+    {
+      "frame": 156,
+      "center": [
+        283,
+        333
+      ],
+      "equivalent_diameter": 48.48092614194896,
+      "step_pixels": 3.605551275463989,
+      "step_diameters": 0.07318097848445106,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1199
+    },
+    {
+      "frame": 157,
+      "center": [
+        285,
+        326
+      ],
+      "equivalent_diameter": 49.320626012009704,
+      "step_pixels": 7.280109889280518,
+      "step_diameters": 0.15016441451561455,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1250
+    },
+    {
+      "frame": 158,
+      "center": [
+        286,
+        318
+      ],
+      "equivalent_diameter": 49.223722468247104,
+      "step_pixels": 8.06225774829855,
+      "step_diameters": 0.1634662493200181,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1237
+    },
+    {
+      "frame": 159,
+      "center": [
+        287,
+        312
+      ],
+      "equivalent_diameter": 48.09199136042739,
+      "step_pixels": 6.082762530298219,
+      "step_diameters": 0.1235738019249163,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1129
+    },
+    {
+      "frame": 160,
+      "center": [
+        289,
+        305
+      ],
+      "equivalent_diameter": 45.057523834318914,
+      "step_pixels": 7.280109889280518,
+      "step_diameters": 0.15137884049590372,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1108
+    },
+    {
+      "frame": 161,
+      "center": [
+        291,
+        299
+      ],
+      "equivalent_diameter": 42.37811201373826,
+      "step_pixels": 6.324555320336759,
+      "step_diameters": 0.14036624257455405,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 1089
+    },
+    {
+      "frame": 162,
+      "center": [
+        292,
+        294
+      ],
+      "equivalent_diameter": 38.54699143520717,
+      "step_pixels": 5.0990195135927845,
+      "step_diameters": 0.12032200754813639,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 939
+    },
+    {
+      "frame": 163,
+      "center": [
+        293,
+        289
+      ],
+      "equivalent_diameter": 32.86858308031829,
+      "step_pixels": 5.0990195135927845,
+      "step_diameters": 0.13228060929641214,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 776
+    },
+    {
+      "frame": 164,
+      "center": [
+        293,
+        289
+      ],
+      "equivalent_diameter": 28.11906394744562,
+      "step_pixels": 0.0,
+      "step_diameters": 0.0,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 597
+    },
+    {
+      "frame": 165,
+      "center": [
+        295,
+        283
+      ],
+      "equivalent_diameter": 20.85212949621832,
+      "step_pixels": 6.324555320336759,
+      "step_diameters": 0.22492054970810263,
+      "source": "accepted_racket_outline_hull",
+      "segmented_pixels": 308
+    }
+  ]
+}
