@@ -1,0 +1,1130 @@
+{
+  "counts": {
+    "groundstroke": 9,
+    "pro-serve": 22,
+    "contact-high-speed": 15,
+    "serve-angle-mechanics": 12,
+    "trajectory-spin": 7,
+    "table-tennis-reference": 7,
+    "mocap-3d": 8
+  },
+  "items": [
+    {
+      "id": "D9idChDWUvs",
+      "title": "Donald Young Forehand Super Slow Motion 1000fps",
+      "channel": "Hi-techtennis.com",
+      "url": "https://www.youtube.com/watch?v=D9idChDWUvs",
+      "duration_seconds": 15.60381,
+      "width": 640,
+      "height": 360,
+      "primary_category": "groundstroke",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "Roc4Yao6iqE",
+      "title": "Jannik Sinner Side View & Slow Motion | Court Level Practice 2022 (4K 60FPS)",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=Roc4Yao6iqE",
+      "duration_seconds": 513.880547,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "a0KvSEv_FZw",
+      "title": "1000FPS Tennis Forehand Slow Motion -- Side View of Footwork, Rotation & Power",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=a0KvSEv_FZw",
+      "duration_seconds": 67.616508,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "YwBC3QeCnvc",
+      "title": "The Best Serve in Ultra Slow Motion [4K 120fps] Sinner Alcaraz Djokovic & More",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=YwBC3QeCnvc",
+      "duration_seconds": 680.966667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "-Eu80hGbgVA",
+      "title": "Carlos Alcaraz | Forehand & Backhand [Slow Motion 4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=-Eu80hGbgVA",
+      "duration_seconds": 415.283,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "WUEUPYv9_oc",
+      "title": "Iga Swiatek | Forehand, Backhand & Serve [Slow Motion 4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=WUEUPYv9_oc",
+      "duration_seconds": 333.933934,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "-hpmBTvgIMc",
+      "title": "Casper Ruud - Forehand & Backhand [Slow Motion 4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=-hpmBTvgIMc",
+      "duration_seconds": 371.066667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "R2Ukue3bLGE",
+      "title": "Carlos Alcaraz | Serve Slow Motion [4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=R2Ukue3bLGE",
+      "duration_seconds": 402.166667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "jJXkfsXSgrw",
+      "title": "Top WTA Serves | Slow Motion 4K 120fps (Front View)",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=jJXkfsXSgrw",
+      "duration_seconds": 506.066667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "N6Z9zaNJHyU",
+      "title": "Lorenzo Musetti | Forehand & Backhand [Slow Motion 4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=N6Z9zaNJHyU",
+      "duration_seconds": 297.133333,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "iuOvL1HdYOc",
+      "title": "Daniil Medvedev | Forehand & Backhand [Slow Motion 4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=iuOvL1HdYOc",
+      "duration_seconds": 387.667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "jjK_bJYdtCI",
+      "title": "Sinner & Berrettini Practice in Slow Motion | 2022 [4K 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=jjK_bJYdtCI",
+      "duration_seconds": 412.483,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "5H0_0RwhfIY",
+      "title": "Novak Djokovic & Emil Ruusuvuori Court Level Practice | w/ Slow Motion Rally 2024 (4K 60FPS)",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=5H0_0RwhfIY",
+      "duration_seconds": 560.06006,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "LPzCO88MvbQ",
+      "title": "Roger Federer SLOW MOTION Points | French Open 2021 | Court Level View | 4K 60fps",
+      "channel": "The Federer Express",
+      "url": "https://www.youtube.com/watch?v=LPzCO88MvbQ",
+      "duration_seconds": 378.81034,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "QUwxiqFUi58",
+      "title": "Stosur topspin serve-Back Super slow motion Chas Tennis video",
+      "channel": "Anatoly Antipin (toly tennis)",
+      "url": "https://www.youtube.com/watch?v=QUwxiqFUi58",
+      "duration_seconds": 26.006349,
+      "width": 480,
+      "height": 360,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "1bzdrQ-OewE",
+      "title": "Spin serve Above Super slow motion",
+      "channel": "Anatoly Antipin (toly tennis)",
+      "url": "https://www.youtube.com/watch?v=1bzdrQ-OewE",
+      "duration_seconds": 42.840816,
+      "width": 640,
+      "height": 360,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "contact-high-speed",
+        "serve-angle-mechanics",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "L3yrfbYqZGo",
+      "title": "Tennis Serve Toss in 1000FPS Slow Motion | Straight Arm, No Hand Curl",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=L3yrfbYqZGo",
+      "duration_seconds": 64.083333,
+      "width": 854,
+      "height": 480,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "eW-FBJKCowI",
+      "title": "1000fps Tennis Serve Comparison --- Side-by-Side Slow Motion",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=eW-FBJKCowI",
+      "duration_seconds": 53.292,
+      "width": 854,
+      "height": 480,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed"
+      ]
+    },
+    {
+      "id": "Ry5ney5VleM",
+      "title": "See the Tennis Serve From Both Sides – 1000FPS Slow Motion Magic",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=Ry5ney5VleM",
+      "duration_seconds": 60.882721,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "contact-high-speed",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "2n5p1u3Hhns",
+      "title": "1000FPS Tennis Slow Motion 🎾 | Powerful Serves, Forehands & Backhands in Ultra Slow Motion",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=2n5p1u3Hhns",
+      "duration_seconds": 143.824399,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "wyeb_M6X948",
+      "title": "1000fps Forehand Breakdown --- Pro Wrist Lag, Racquet Angle & Contact Point",
+      "channel": "HowToSkillHub",
+      "url": "https://www.youtube.com/watch?v=wyeb_M6X948",
+      "duration_seconds": 53.667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "jRXUK0Jd9ZM",
+      "title": "Slow Motion ATP Forehand Compilation | Court Level (4K 60FPS)",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=jRXUK0Jd9ZM",
+      "duration_seconds": 1750.016683,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "K49xtHv5VkQ",
+      "title": "Slow Motion ATP Backhand Technique Compilation | Court Level Double-Handed & One-Handed (4K 60FPS)",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=K49xtHv5VkQ",
+      "duration_seconds": 2135.702369,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "F18VBTKIUro",
+      "title": "Jannick Sinner Forehand Slow Motion 120FPS",
+      "channel": "Haptic Kinetics",
+      "url": "https://www.youtube.com/watch?v=F18VBTKIUro",
+      "duration_seconds": 64.737234,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "XEshCsHrvcc",
+      "title": "Elena Rybakina  | Forehand and Backhand Slow-motion [4k 120fps]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=XEshCsHrvcc",
+      "duration_seconds": 204.166667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "jBv4WjGQWFQ",
+      "title": "Pete Sampras Serving in Super Slow Motion",
+      "channel": "TennisJet",
+      "url": "https://www.youtube.com/watch?v=jBv4WjGQWFQ",
+      "duration_seconds": 45.023492,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "uyTtZE6LSek",
+      "title": "Novak Djokovic Serve In Super Slow Motion 3 - Indian Wells 2013 - BNP Paribas Open",
+      "channel": "Essential Tennis - Lessons and Instruction for Passionate Players",
+      "url": "https://www.youtube.com/watch?v=uyTtZE6LSek",
+      "duration_seconds": 94.853515,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "InYd8IrFnkU",
+      "title": "Roger Federer - Super Slow Motion First Serve Ace",
+      "channel": "Slow Motion Tennis",
+      "url": "https://www.youtube.com/watch?v=InYd8IrFnkU",
+      "duration_seconds": 53.011156,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "FX92UllVTt0",
+      "title": "Forehand muscle \"Relaxation\" - Racquet hits the ball Super slow motion (from Olympus IMS)",
+      "channel": "Anatoly Antipin (toly tennis)",
+      "url": "https://www.youtube.com/watch?v=FX92UllVTt0",
+      "duration_seconds": 29.442902,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "M-GuYmAAUec",
+      "title": "Novak Djokovic Serve In Super Slow Motion 2 - 2013 Cincinnati Open",
+      "channel": "Essential Tennis - Lessons and Instruction for Passionate Players",
+      "url": "https://www.youtube.com/watch?v=M-GuYmAAUec",
+      "duration_seconds": 113.197279,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "oPw1j3ydDiQ",
+      "title": "Ivo Karlovic in Super Slow Motion | Serve #1 | Western & Southern Open 2014",
+      "channel": "Essential Tennis - Lessons and Instruction for Passionate Players",
+      "url": "https://www.youtube.com/watch?v=oPw1j3ydDiQ",
+      "duration_seconds": 130.171708,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed"
+      ]
+    },
+    {
+      "id": "uHCNOdZv5os",
+      "title": "Adrian Mannarino Forehand Super Slow Motion",
+      "channel": "Hi-techtennis.com",
+      "url": "https://www.youtube.com/watch?v=uHCNOdZv5os",
+      "duration_seconds": 21.130159,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "8Sm5drkCQJs",
+      "title": "Marco Chiudinelli twist serve-Back Super slow motion",
+      "channel": "Anatoly Antipin (toly tennis)",
+      "url": "https://www.youtube.com/watch?v=8Sm5drkCQJs",
+      "duration_seconds": 48.018866,
+      "width": 482,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed"
+      ]
+    },
+    {
+      "id": "FQ4pDx2fptQ",
+      "title": "Ben Shelton Forehand Analysis In Super Slow Motion",
+      "channel": "Tennis Doctor",
+      "url": "https://www.youtube.com/watch?v=FQ4pDx2fptQ",
+      "duration_seconds": 290.933,
+      "width": 640,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "FdZtv31XOLs",
+      "title": "Almagro serve Right Super slow motion",
+      "channel": "Anatoly Antipin (toly tennis)",
+      "url": "https://www.youtube.com/watch?v=FdZtv31XOLs",
+      "duration_seconds": 35.178231,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed"
+      ]
+    },
+    {
+      "id": "EaH-IH7qgHY",
+      "title": "ATP Finals 2021 - 16/11/21 -  Jannik Sinner Warmup Serve and Backhand Super Slow Motion #shorts",
+      "channel": "Gabriele Ercole",
+      "url": "https://www.youtube.com/watch?v=EaH-IH7qgHY",
+      "duration_seconds": 62.167,
+      "width": 240,
+      "height": 426,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "_oCyoGLL0S8",
+      "title": "ATP Serves Federer, Djokovic, Wawrinka Super Slow Motion",
+      "channel": "Topspin Tennis",
+      "url": "https://www.youtube.com/watch?v=_oCyoGLL0S8",
+      "duration_seconds": 114.072292,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "8C3b5WxyGrk",
+      "title": "Djokovic - Saque Super Slow Motion",
+      "channel": "teoria tennis",
+      "url": "https://www.youtube.com/watch?v=8C3b5WxyGrk",
+      "duration_seconds": 77.670748,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "KGiOXLw-LaA",
+      "title": "Marcos Baghdatis Slice Super Slow Motion (1000 fps)",
+      "channel": "Hi-techtennis.com",
+      "url": "https://www.youtube.com/watch?v=KGiOXLw-LaA",
+      "duration_seconds": 14.233832,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "contact-high-speed",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "_wut0HlifLQ",
+      "title": "World #1 Jannik Sinner's forehand backhand in 4K Slow Motion",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=_wut0HlifLQ",
+      "duration_seconds": 504.233333,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "FmrLQmZ1CVQ",
+      "title": "Novak Djokovic | Forehand Backhand in 4K Slow Motion [Front & Back View]",
+      "channel": "Slow-Mo Tennis",
+      "url": "https://www.youtube.com/watch?v=FmrLQmZ1CVQ",
+      "duration_seconds": 412.733333,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "LZWckoXg5uI",
+      "title": "Jannik Sinner FOREHAND in Slow Motion | Perfect Modern Technique (4K)",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=LZWckoXg5uI",
+      "duration_seconds": 292.525859,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "IYe2oc-870c",
+      "title": "Carlos Alcaraz FOREHAND TECHNIQUE in Slow Motion 4K – Tennis Training",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=IYe2oc-870c",
+      "duration_seconds": 311.8115,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "QjtTJuwkv08",
+      "title": "Jannik Sinner’s SERVE in Slow Motion 4K | Perfect Trophy Position?",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=QjtTJuwkv08",
+      "duration_seconds": 202.83617,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "H6-9SbDiqRA",
+      "title": "Carlos Alcaraz Forehand in Slow Motion 4K | Explosive Modern Technique",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=H6-9SbDiqRA",
+      "duration_seconds": 421.688355,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "3oOolywV4F8",
+      "title": "Aryna Sabalenka Serve in Slow Motion 4K | Explosive Power & Technique",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=3oOolywV4F8",
+      "duration_seconds": 240.44044,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "-5cmyO1qR1o",
+      "title": "Coco Gauff Serve in Slow Motion 4K | Power, Balance & Trophy Position",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=-5cmyO1qR1o",
+      "duration_seconds": 340.940941,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "plCeWFMULxI",
+      "title": "How Victoria Azarenka SERVES | Slow Motion 4K",
+      "channel": "Volley Viper Tennis",
+      "url": "https://www.youtube.com/watch?v=plCeWFMULxI",
+      "duration_seconds": 198.809252,
+      "width": 640,
+      "height": 360,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "B2uDfNd9QSo",
+      "title": "Roger Federer Serve Slow Motion in Court Level View - Ultimate ATP Serve Technique",
+      "channel": "Tennis Pro TV",
+      "url": "https://www.youtube.com/watch?v=B2uDfNd9QSo",
+      "duration_seconds": 552.385167,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "pg_dxIvJRZo",
+      "title": "Alexander Zverev Serve Slow Motion (Side View) - ATP Serve Technique",
+      "channel": "Love Tennis",
+      "url": "https://www.youtube.com/watch?v=pg_dxIvJRZo",
+      "duration_seconds": 487.36,
+      "width": 854,
+      "height": 480,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "u4bnYnfPyGg",
+      "title": "Jannik Sinner's HIGH-SPEED Court Level Practice with Karen Khachanov | 4K 60FPS | ft Tiafoe",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=u4bnYnfPyGg",
+      "duration_seconds": 797.497497,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "XXXmEKmIhOg",
+      "title": "The Future Is Now! Newest World #1 | See How FAST Jannik Sinner Plays at Court Level in 4K 60FPS!",
+      "channel": "COURT LEVEL TENNIS - Liam Apilado",
+      "url": "https://www.youtube.com/watch?v=XXXmEKmIhOg",
+      "duration_seconds": 889.522856,
+      "width": 854,
+      "height": 480,
+      "primary_category": "pro-serve",
+      "categories": [
+        "pro-serve"
+      ]
+    },
+    {
+      "id": "LY7n-pQ24IU",
+      "title": "Serve Slow Motion - Flat, Kick, And Slice - Front, Back, And Side View",
+      "channel": "Intuitive Tennis",
+      "url": "https://www.youtube.com/watch?v=LY7n-pQ24IU",
+      "duration_seconds": 262.501587,
+      "width": 640,
+      "height": 360,
+      "primary_category": "serve-angle-mechanics",
+      "categories": [
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "3nKQtDzcRMc",
+      "title": "Topspin Kick Serve in Slow Motion [Back View]",
+      "channel": "PURE TENNIS sense",
+      "url": "https://www.youtube.com/watch?v=3nKQtDzcRMc",
+      "duration_seconds": 15.582,
+      "width": 854,
+      "height": 480,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "serve-angle-mechanics",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "LFp78dMr3Rk",
+      "title": "Slow motion table tennis; how spinny is your serve?",
+      "channel": "Paul Redman",
+      "url": "https://www.youtube.com/watch?v=LFp78dMr3Rk",
+      "duration_seconds": 179.954649,
+      "width": 640,
+      "height": 360,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "MUljjSs40lA",
+      "title": "Carlos Alcaraz Forehand & Backhand Side View  | Court Level Practice",
+      "channel": "Courtside Tennis Highlights",
+      "url": "https://www.youtube.com/watch?v=MUljjSs40lA",
+      "duration_seconds": 40.91356,
+      "width": 640,
+      "height": 360,
+      "primary_category": "groundstroke",
+      "categories": [
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "jqLRrs9Cb14",
+      "title": "フルカシュのスピンサーブ(スロー) / Hubert Hurkacz Spin Serve Slow Motion",
+      "channel": "Tennis Analytics ",
+      "url": "https://www.youtube.com/watch?v=jqLRrs9Cb14",
+      "duration_seconds": 33.970794,
+      "width": 640,
+      "height": 360,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "pro-serve",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "VgTQLYjU3XY",
+      "title": "Table tennis rally taken by a set of 3D high speed cameras",
+      "channel": "ouxgmt",
+      "url": "https://www.youtube.com/watch?v=VgTQLYjU3XY",
+      "duration_seconds": 102.933333,
+      "width": 854,
+      "height": 320,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "contact-high-speed",
+        "mocap-3d",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "G3HsFuP8amU",
+      "title": "3D Motion Capture",
+      "channel": "Court 16 Chronicles",
+      "url": "https://www.youtube.com/watch?v=G3HsFuP8amU",
+      "duration_seconds": 111.177143,
+      "width": 640,
+      "height": 360,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "XEXXjM8e2Rc",
+      "title": "Perfect Serve PRONATION Technique For Massive POWER & SPIN",
+      "channel": "RacquetFlex",
+      "url": "https://www.youtube.com/watch?v=XEXXjM8e2Rc",
+      "duration_seconds": 727.2265,
+      "width": 640,
+      "height": 360,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "serve-angle-mechanics",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "-YRfj4YuBnw",
+      "title": "Tennis Tracker 3D Trajectory Approximation",
+      "channel": "jeanwhowenttocurlcur",
+      "url": "https://www.youtube.com/watch?v=-YRfj4YuBnw",
+      "duration_seconds": 19.713741,
+      "width": 640,
+      "height": 360,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "rvwayg2vuI8",
+      "title": "Novak Djokovic Forehand Slow Motion 1000 fps",
+      "channel": "Hi-techtennis.com",
+      "url": "https://www.youtube.com/watch?v=rvwayg2vuI8",
+      "duration_seconds": 16.716717,
+      "width": 854,
+      "height": 480,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "E9-AKhBPnJ0",
+      "title": "How to Hit a Proper Tennis Serve: Slow Motion",
+      "channel": "Rip It Tennis",
+      "url": "https://www.youtube.com/watch?v=E9-AKhBPnJ0",
+      "duration_seconds": 34.666667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "serve-angle-mechanics"
+      ]
+    },
+    {
+      "id": "0gseSANtEZ0",
+      "title": "High speed footage of hitting a tennis ball from ix716R camera",
+      "channel": "Matt Rece",
+      "url": "https://www.youtube.com/watch?v=0gseSANtEZ0",
+      "duration_seconds": 14.88,
+      "width": 640,
+      "height": 480,
+      "primary_category": "trajectory-spin",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "2wIdP2u_JGQ",
+      "title": "Tennis serve motion capture experiment with an elite player",
+      "channel": "John Rasmussen",
+      "url": "https://www.youtube.com/watch?v=2wIdP2u_JGQ",
+      "duration_seconds": 5.138467,
+      "width": 854,
+      "height": 480,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "QAcBgVZheDo",
+      "title": "Dimitrov Slow Motion Forehand",
+      "channel": "Find Your Game",
+      "url": "https://www.youtube.com/watch?v=QAcBgVZheDo",
+      "duration_seconds": 19.933333,
+      "width": 790,
+      "height": 480,
+      "primary_category": "groundstroke",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "serve-angle-mechanics",
+        "groundstroke",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "aGsntCznhcY",
+      "title": "Slow Motion Tennis Ball Impact",
+      "channel": "Frank Noschese",
+      "url": "https://www.youtube.com/watch?v=aGsntCznhcY",
+      "duration_seconds": 18.297324,
+      "width": 320,
+      "height": 240,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin"
+      ]
+    },
+    {
+      "id": "AFPt_XdKKxo",
+      "title": "Tennis Motion Capture - Xsens",
+      "channel": "Xsens ",
+      "url": "https://www.youtube.com/watch?v=AFPt_XdKKxo",
+      "duration_seconds": 50.526621,
+      "width": 640,
+      "height": 360,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "50LRlCSFxoQ",
+      "title": "Synchronised tennis motion capture data, video and graphical infomation",
+      "channel": "mendip89",
+      "url": "https://www.youtube.com/watch?v=50LRlCSFxoQ",
+      "duration_seconds": 26.006349,
+      "width": 634,
+      "height": 360,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "gbQxaDPADOE",
+      "title": "Tennis serve Motion Capture (BEST-Tennis ANR PIA3 Project) - M2S lab",
+      "channel": "Laboratoire M2S",
+      "url": "https://www.youtube.com/watch?v=gbQxaDPADOE",
+      "duration_seconds": 82.639819,
+      "width": 640,
+      "height": 360,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "stEhSvoou4g",
+      "title": "Roger Federer Forehand Slow Motion - Ultimate ATP Modern Tennis Forehand Technique?",
+      "channel": "Love Tennis",
+      "url": "https://www.youtube.com/watch?v=stEhSvoou4g",
+      "duration_seconds": 252.252,
+      "width": 854,
+      "height": 480,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "kS5cZuxsjPE",
+      "title": "N.Kyrgios Forehand in Slow Motion",
+      "channel": "テニス映像館とicooyテニス個別レッスンアカデミー",
+      "url": "https://www.youtube.com/watch?v=kS5cZuxsjPE",
+      "duration_seconds": 14.024853,
+      "width": 640,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed",
+        "pro-serve",
+        "groundstroke"
+      ]
+    },
+    {
+      "id": "x3Rr9-od7_c",
+      "title": "Ivo Karlovic Serve in Slow Motion (210 fps)",
+      "channel": "tennisspeed",
+      "url": "https://www.youtube.com/watch?v=x3Rr9-od7_c",
+      "duration_seconds": 18.970703,
+      "width": 480,
+      "height": 360,
+      "primary_category": "contact-high-speed",
+      "categories": [
+        "contact-high-speed"
+      ]
+    },
+    {
+      "id": "D0Ckul9iDRI",
+      "title": "Tennis Serve Technique In Slow Motion From Top View",
+      "channel": "Feel Tennis Instruction",
+      "url": "https://www.youtube.com/watch?v=D0Ckul9iDRI",
+      "duration_seconds": 811.166667,
+      "width": 854,
+      "height": 480,
+      "primary_category": "mocap-3d",
+      "categories": [
+        "serve-angle-mechanics",
+        "mocap-3d"
+      ]
+    },
+    {
+      "id": "tqP-VqZqp_o",
+      "title": "High Speed Video of Supersonic Ping Pong Ball",
+      "channel": "purdueMET",
+      "url": "https://www.youtube.com/watch?v=tqP-VqZqp_o",
+      "duration_seconds": 593.200181,
+      "width": 640,
+      "height": 360,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "tzE-I8nb7bw",
+      "title": "High Speed Camera footage of Ping Pong playe",
+      "channel": "TIS Broadcasting",
+      "url": "https://www.youtube.com/watch?v=tzE-I8nb7bw",
+      "duration_seconds": 90.163084,
+      "width": 640,
+      "height": 360,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "0xrC8vaddcg",
+      "title": "World's Spinniest Table",
+      "channel": "Pongfinity",
+      "url": "https://www.youtube.com/watch?v=0xrC8vaddcg",
+      "duration_seconds": 484.88,
+      "width": 854,
+      "height": 480,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "--CEqSDd5yQ",
+      "title": "5 Tips To Produce KILLER Spin | Table Tennis",
+      "channel": "TableTennisDaily",
+      "url": "https://www.youtube.com/watch?v=--CEqSDd5yQ",
+      "duration_seconds": 505.52,
+      "width": 854,
+      "height": 480,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "ZcD0n3GBsZ8",
+      "title": "How to Generate Maximum Spin in Table Tennis - Key Factors for Spin Generation",
+      "channel": "Learn Table Tennis",
+      "url": "https://www.youtube.com/watch?v=ZcD0n3GBsZ8",
+      "duration_seconds": 324.433333,
+      "width": 854,
+      "height": 480,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "contact-high-speed",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    },
+    {
+      "id": "F_WrLqhRF-c",
+      "title": "Understanding Spin | Killerspin Table Tennis Lessons",
+      "channel": "Killerspin",
+      "url": "https://www.youtube.com/watch?v=F_WrLqhRF-c",
+      "duration_seconds": 146.513033,
+      "width": 640,
+      "height": 480,
+      "primary_category": "table-tennis-reference",
+      "categories": [
+        "mocap-3d",
+        "trajectory-spin",
+        "table-tennis-reference"
+      ]
+    }
+  ]
+}
