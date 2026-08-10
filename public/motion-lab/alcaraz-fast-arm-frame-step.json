@@ -1,0 +1,36 @@
+{
+  "verdict": "PASS_REAL_SOURCE_FAST_ARM_FRAME_STEP",
+  "evidence_class": "REAL_SOURCE_PIXEL_FRAME_STEP",
+  "source_frames": [
+    121,
+    136
+  ],
+  "source_fps": 30,
+  "playback_fps": 8,
+  "playback_speed": 0.26666666666666666,
+  "decoded_frames": 16,
+  "unique_decoded_frames": 16,
+  "displayed_joint_positions": 48,
+  "existing_manual_frames": [
+    130
+  ],
+  "fixed_crop_source_pixels": [
+    80,
+    80,
+    560,
+    350
+  ],
+  "minimum_crop_margin_px": 30.127044677734375,
+  "video_sha256": "85fdccef34b0db5ae8a300d4f7862a4c7d85b6dc5f9197068b40a41d50261ec6",
+  "human_visual_review": {
+    "reviewed_frames": 16,
+    "reviewed_joint_positions": 48,
+    "joint_positions_on_corresponding_racket_arm": 48,
+    "arm_identity_switches": 0,
+    "fixed_crop_contains_arm": true,
+    "review_sheets": [
+      "all-frame-review/frames-121-128.jpg",
+      "all-frame-review/frames-129-136.jpg"
+    ]
+  }
+}
