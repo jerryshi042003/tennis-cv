@@ -1,0 +1,144 @@
+{
+  "verdict": "PASS_RACKET_RISE_PRECEDES_VISIBLE_LEG_EXTENSION_ON_SOURCE_CLOCK",
+  "evidence_class": "SOURCE_CAMERA_2D_VISIBLE_SEQUENCE",
+  "source_frames": [
+    121,
+    136
+  ],
+  "source_fps": 30,
+  "playback_fps": 8,
+  "playback_speed": 0.26666666666666666,
+  "decoded_frames": 16,
+  "unique_decoded_frames": 16,
+  "racket_rise_start_frame": 129,
+  "visible_leg_extension_frame": 132,
+  "displayed_frame_offset": 3,
+  "relationship": "RACKET_RISE_BEFORE_VISIBLE_LEG_EXTENSION",
+  "angle_threshold_deg": 160.0,
+  "minimum_landmark_visibility": 0.8325302600860596,
+  "measurements": [
+    {
+      "frame": 121,
+      "left_knee_screen_angle_deg": 85.2297645652427,
+      "right_knee_screen_angle_deg": 92.9085758547667,
+      "minimum_landmark_visibility": 0.906193196773529,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 122,
+      "left_knee_screen_angle_deg": 88.54558392414754,
+      "right_knee_screen_angle_deg": 95.32542281928785,
+      "minimum_landmark_visibility": 0.9012340307235718,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 123,
+      "left_knee_screen_angle_deg": 88.51239590186111,
+      "right_knee_screen_angle_deg": 97.12811383470537,
+      "minimum_landmark_visibility": 0.9041402339935303,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 124,
+      "left_knee_screen_angle_deg": 91.57817480519086,
+      "right_knee_screen_angle_deg": 102.04867141834403,
+      "minimum_landmark_visibility": 0.9076994061470032,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 125,
+      "left_knee_screen_angle_deg": 99.78875143986158,
+      "right_knee_screen_angle_deg": 110.75419908242502,
+      "minimum_landmark_visibility": 0.9137918949127197,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 126,
+      "left_knee_screen_angle_deg": 114.13028940163608,
+      "right_knee_screen_angle_deg": 122.73826981374908,
+      "minimum_landmark_visibility": 0.9199367165565491,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 127,
+      "left_knee_screen_angle_deg": 130.77413141422753,
+      "right_knee_screen_angle_deg": 133.2922324793866,
+      "minimum_landmark_visibility": 0.9253214001655579,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 128,
+      "left_knee_screen_angle_deg": 148.81636962387594,
+      "right_knee_screen_angle_deg": 146.39201049520173,
+      "minimum_landmark_visibility": 0.9312753677368164,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 129,
+      "left_knee_screen_angle_deg": 166.73124431519344,
+      "right_knee_screen_angle_deg": 150.8536563266334,
+      "minimum_landmark_visibility": 0.9336421489715576,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 130,
+      "left_knee_screen_angle_deg": 173.05824898693152,
+      "right_knee_screen_angle_deg": 152.63227041885168,
+      "minimum_landmark_visibility": 0.9050430059432983,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 131,
+      "left_knee_screen_angle_deg": 174.09688991040693,
+      "right_knee_screen_angle_deg": 159.95637807004303,
+      "minimum_landmark_visibility": 0.8547137975692749,
+      "both_at_least_160_deg": false
+    },
+    {
+      "frame": 132,
+      "left_knee_screen_angle_deg": 160.7664300356593,
+      "right_knee_screen_angle_deg": 169.77673950603838,
+      "minimum_landmark_visibility": 0.8325302600860596,
+      "both_at_least_160_deg": true
+    },
+    {
+      "frame": 133,
+      "left_knee_screen_angle_deg": 160.47866036943694,
+      "right_knee_screen_angle_deg": 169.05562975124366,
+      "minimum_landmark_visibility": 0.842549204826355,
+      "both_at_least_160_deg": true
+    },
+    {
+      "frame": 134,
+      "left_knee_screen_angle_deg": 161.80594089005405,
+      "right_knee_screen_angle_deg": 170.58804488901185,
+      "minimum_landmark_visibility": 0.8562349081039429,
+      "both_at_least_160_deg": true
+    },
+    {
+      "frame": 135,
+      "left_knee_screen_angle_deg": 165.25270056556803,
+      "right_knee_screen_angle_deg": 168.75426832952203,
+      "minimum_landmark_visibility": 0.8702409267425537,
+      "both_at_least_160_deg": true
+    },
+    {
+      "frame": 136,
+      "left_knee_screen_angle_deg": 170.61152688002255,
+      "right_knee_screen_angle_deg": 169.25360352926697,
+      "minimum_landmark_visibility": 0.882582426071167,
+      "both_at_least_160_deg": true
+    }
+  ],
+  "video_sha256": "5c9ba2d15ed8da7255714490f30e0b49e7da38695cee81ad5b7f85f3b96214ae",
+  "human_visual_review": {
+    "reviewed_frames": 16,
+    "reviewed_displayed_landmark_positions": 96,
+    "displayed_landmark_positions_on_corresponding_body_part": 96,
+    "threshold_event_visually_consistent": true,
+    "review_sheets": [
+      "all-frame-review/frames-121-128.jpg",
+      "all-frame-review/frames-129-136.jpg"
+    ]
+  }
+}
