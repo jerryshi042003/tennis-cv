@@ -1,0 +1,25 @@
+{
+  "verdict": "PASS_BOTH_JUMPS_SOURCE_CONSISTENT_FAST_30FPS_MOTION",
+  "evidence_class": "REAL_SOURCE_PIXEL_JUMP_AUDIT",
+  "source_frames": [
+    131,
+    132,
+    133,
+    138,
+    139,
+    140
+  ],
+  "decoded_frames": 6,
+  "fps": 2,
+  "unique_decoded_frames": 6,
+  "flagged_transitions": [
+    132,
+    139
+  ],
+  "transition_results": {
+    "132": "SOURCE_CONSISTENT_FAST_MOTION",
+    "139": "SOURCE_CONSISTENT_FAST_MOTION"
+  },
+  "human_review": "All six enlarged real-source frames were inspected together. The orange current marker sits on the visible racket head in f131, f132, f133, f138, f139 and f140; the visible racket displacement follows each shown arrow. Both flagged steps are genuine fast source motion sampled at 30 fps, not center-tracking jumps.",
+  "video_sha256": "3aaca56e6ad959a244dd59d3708c0729c2041abc2f6d6a7c71018c6c84867cdf"
+}
