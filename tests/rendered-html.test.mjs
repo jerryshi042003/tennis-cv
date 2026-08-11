@@ -37,6 +37,17 @@ test("exports every consolidated route", async () => {
   await Promise.all(routes.map((path) => access(new URL(path, root))));
 });
 
+test("contact mechanics uses boundary-safe direct curve sampling", async () => {
+  const html = await readFile(
+    new URL("../out/serve-motion-lab/contact.html", import.meta.url),
+    "utf8",
+  );
+  assert.match(html, /const curveT=THREE\.MathUtils\.clamp\(u,0,0\.999\)/);
+  assert.match(html, /curve\.getPoint\(curveT\)/);
+  assert.match(html, /curve\.getTangent\(curveT\)/);
+  assert.doesNotMatch(html, /curve\.getPointAt\(/);
+});
+
 test("ships the ping-pong demo and representative evidence cuts", async () => {
   const root = new URL("../public/", import.meta.url);
   const required = [
