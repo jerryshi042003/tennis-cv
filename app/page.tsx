@@ -1,7 +1,7 @@
 import { literature, phases, statusLabel } from "./research-data";
 
 const attemptCount = phases.reduce((sum, phase) => sum + phase.attempts.length, 0);
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/tennis-cv";
 
 const programRoutes = [
   ["Visual evidence", "80 reviewed examples with source links, categories, and exact thumbnails.", "/visual-evidence/"],

@@ -1,4 +1,4 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/tennis-cv";
 
 const routes = [
   ["Research log", "70 materially different attempts with question, observed result, decision, status, literature, and direct evidence."],
