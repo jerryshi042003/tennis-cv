@@ -226,8 +226,11 @@
     const u = t<PH.hit ? THREE.MathUtils.mapLinear(t,0,PH.hit,0,0.5)
             : t<PH.rel ? THREE.MathUtils.mapLinear(t,PH.hit,PH.rel,0.5,0.565)
             : THREE.MathUtils.mapLinear(t,PH.rel,1,0.565,1);
-    const p=curve.getPointAt(Math.min(u,0.999));
-    const tan=curve.getTangentAt(Math.min(u,0.999));
+    // Parameterize the authored path directly. Arc-length mapping in the
+    // vendored Three.js build can request an undefined sample at the boundary.
+    const curveT=THREE.MathUtils.clamp(u,0,0.999);
+    const p=curve.getPoint(curveT);
+    const tan=curve.getTangent(curveT);
     // orient: bed center at p; racket local +z is face normal; local up follows path
     racket.position.copy(p);
     const m=new THREE.Matrix4().lookAt(p, p.clone().add(tan), V(0,1,0));
