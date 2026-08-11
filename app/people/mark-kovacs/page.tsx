@@ -1,4 +1,4 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/tennis-cv";
 
 const sources = [
   ["Where serve power comes from", "https://www.youtube.com/watch?v=jvDds3KEY4s", "Back-hip vertical displacement and rapid long-axis rotation are the two retained power mechanisms."],

@@ -16,6 +16,10 @@ test("exports the consolidated research log rather than a Sites worker", async (
   assert.match(html, /Axial-observability claim audit/);
   assert.doesNotMatch(html, /One real win: the ball stays tracked/);
   assert.doesNotMatch(html, /codex-preview|starter loading skeleton|Your site is taking shape/i);
+  assert.match(html, /href="\/tennis-cv\/_next\/static\/[^\"]+\.css"/);
+  assert.match(html, /src="\/tennis-cv\/_next\/static\/[^\"]+\.js"/);
+  assert.match(html, /href="\/tennis-cv\/visual-evidence\/"/);
+  assert.doesNotMatch(html, /(?:href|src)="\/_next\/static\//);
 });
 
 test("exports every consolidated route", async () => {

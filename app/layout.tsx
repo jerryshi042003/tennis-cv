@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/tennis-cv";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jerryshi042003.github.io"),

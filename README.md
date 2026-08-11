@@ -35,3 +35,7 @@ a blanket license.
 npm ci
 npm test
 ```
+
+The production path defaults to `/tennis-cv`, matching the GitHub Pages
+project URL. A plain build is therefore safe to publish; local root-path work
+must opt out explicitly with `NEXT_PUBLIC_BASE_PATH=`.
