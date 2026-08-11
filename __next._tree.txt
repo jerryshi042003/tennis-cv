@@ -1,2 +1,2 @@
 :HL["/tennis-cv/_next/static/chunks/0c._oyyg8y8bf.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"wYE_8j4aLOgm_a4fLY9hv"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"oLZ4sBVDa1WiZRVvSe1a4"}
