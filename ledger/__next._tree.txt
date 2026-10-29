@@ -1,2 +1,4 @@
-:HL["/tennis-cv/_next/static/chunks/0c._oyyg8y8bf.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"ledger","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"oLZ4sBVDa1WiZRVvSe1a4"}
+:HL["/tennis-cv/_next/static/chunks/14a-p8m7yb_ik.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"ledger","h":96,"c":"$Q2"}]]
+0:{"b":"AerF6A0EPEussEE8q-IH8","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
