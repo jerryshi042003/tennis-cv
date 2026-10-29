@@ -218,6 +218,7 @@
   let curve=new THREE.CatmullRomCurve3(mode.path);
 
   const PH={hit:0.50, rel:0.585, pron:0.75};
+  const PLAY_RATE=0.22;
   const phaseName=t=> t<PH.hit?'approach — edge first':t<PH.rel?'HOOK — ball riding 2–3 strings':t<PH.pron?'release → pronation fires':'out — finish is diagnostics';
   const phaseKey=t=> t<PH.hit-0.04?'approach':t<PH.hit+0.01?'hit':t<PH.rel?'hook':t<PH.pron?'release':'out';
 
@@ -248,7 +249,9 @@
     else { const k=THREE.MathUtils.mapLinear(t,PH.rel,1,0,1);
       ball.position.copy(mode.contact).add(mode.dep.clone().multiplyScalar(0.05+2.6*k*k+1.2*k));
       axis.visible=true; axis.setDirection(mode.spinAxis);
-      ball.rotateOnWorldAxis(mode.spinAxis, 0.0); }
+    }
+    // Timeline-derived rotation makes scrubbing and mode changes repeatable.
+    ball.quaternion.setFromAxisAngle(mode.spinAxis, Math.max(0,t-PH.rel)*mode.spinRate/PLAY_RATE);
     dot.position.copy(mode.dotDir).multiplyScalar(0.105);
     document.getElementById('phase').textContent=phaseName(t);
     const k=phaseKey(t);
@@ -289,7 +292,7 @@
   document.getElementById('m-kick').onclick=()=>setMode('kick');
   function setMode(n){ modeName=n; mode=MODES[n]; curve=new THREE.CatmullRomCurve3(mode.path);
     document.querySelectorAll('.mode').forEach(b=>b.classList.toggle('on', b.id==='m-'+n));
-    t=0; resetTrail(); pose(0); }
+    t=0; scrub.value=0; resetTrail(); pose(0); }
   document.querySelectorAll('.vw').forEach(b=>b.onclick=()=>setView(b.dataset.view));
   function preroll(){ // rebuild trail up to t so scrubbing keeps the tail
     const steps=60; resetTrail();
@@ -305,11 +308,10 @@
 
   let last=performance.now();
   function loop(now){ const dt=(now-last)/1000; last=now;
-    if(playing){ t+=dt*0.22*speed; if(t>1.15){t=0; resetTrail();} const tc=Math.min(t,1);
-      scrub.value=Math.round(tc*1000); pose(tc); pushTrail();
-      if(tc>PH.rel) ball.rotateOnWorldAxis(mode.spinAxis, dt*mode.spinRate*speed); }
+    if(playing){ t+=dt*PLAY_RATE*speed; if(t>1.15){t=0; resetTrail();} const tc=Math.min(t,1);
+      scrub.value=Math.round(tc*1000); pose(tc); pushTrail(); }
     camUpdate(); renderer.render(scene,camera); requestAnimationFrame(loop); }
-  pose(0); requestAnimationFrame(loop);
+  pose(t); requestAnimationFrame(loop);
 })();
 </script>
 </body>
