@@ -37,6 +37,16 @@ test("exports every consolidated route", async () => {
   await Promise.all(routes.map((path) => access(new URL(path, root))));
 });
 
+test("research entries link to evidence inside the GitHub Pages project", async () => {
+  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const links = [...html.matchAll(/href="([^"]+)">Open evidence cut/g)].map((match) => match[1]);
+  assert.ok(links.length > 0, "the research ledger must retain its evidence links");
+  for (const href of links) {
+    assert.ok(href.startsWith("/tennis-cv/media/"), `wrong deployment path: ${href}`);
+    await access(new URL(`../out/${href.slice("/tennis-cv/".length)}`, import.meta.url));
+  }
+});
+
 test("contact mechanics uses boundary-safe direct curve sampling", async () => {
   const html = await readFile(
     new URL("../out/serve-motion-lab/contact.html", import.meta.url),

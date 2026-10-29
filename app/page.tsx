@@ -115,7 +115,7 @@ export default function Home() {
                     <p><strong>Question:</strong> {attempt.question}</p>
                     <p><strong>Observed:</strong> {attempt.result}</p>
                     <p><strong>Decision:</strong> {attempt.implication}</p>
-                    {attempt.artifact && <a href={attempt.artifact}>Open evidence cut ↗</a>}
+                    {attempt.artifact && <a href={`${basePath}${attempt.artifact}`}>Open evidence cut ↗</a>}
                   </li>
                 ))}
               </ol>
