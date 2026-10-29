@@ -84,7 +84,7 @@ const D=[
 ["Off-platform",2,"YouTube @servedoc","https://www.youtube.com/@servedoc","Pat Dougherty — Bollettieri/IMG 'Serve Doctor'","Serve-build archive; IG unconfirmed.","EN",""],
 ["Off-platform",2,"ResearchGate / Sloan","https://www.researchgate.net/profile/Machar-Reid","Machar Reid — ex Head of Innovation, Tennis Australia","100+ papers; editor of ITF's Biomechanics of Advanced Tennis.","EN",""]];
 const doms=["All","Tennis","Table Tennis","Padel","Off-platform"];let cur="All",showAll=false;
-const KEY="pc-followed";let fol={};try{fol=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
+const KEY="pc-followed";let fol={};try{const stored=JSON.parse(localStorage.getItem(KEY));if(stored&&typeof stored==="object"&&!Array.isArray(stored))fol=stored}catch(e){}
 const tabs=document.getElementById("tabs"),list=document.getElementById("list"),q=document.getElementById("q"),count=document.getElementById("count"),allB=document.getElementById("all");
 const emb=u=>u?u.replace(/\/?$/,"/")+"embed/captioned/":"";
 let live={};fetch("posts.json").then(r=>r.ok?r.json():null).then(j=>{if(j&&j.accounts){live=j.accounts;render()}}).catch(()=>{});
@@ -107,7 +107,7 @@ q.addEventListener("input",render);
 allB.addEventListener("click",()=>{showAll=!showAll;render()});
 list.addEventListener("click",e=>{const b=e.target.closest(".pbtn");if(!b)return;const c=b.closest(".card");const ex=c.querySelector(".embed");const r=D[+c.dataset.i];const es=embsFor(r);
 if(ex){ex.remove();b.textContent="▶ post"+(es.length>1?"s ("+es.length+")":"");}else{const d=document.createElement("div");d.className="embed";d.innerHTML=es.map(u=>`<iframe loading="lazy" src="${u}" allowfullscreen></iframe>`).join("");c.appendChild(d);b.textContent="✕ hide";}});
-list.addEventListener("change",e=>{const c=e.target.closest("input[type=checkbox]");if(c){fol[c.dataset.h]=c.checked;localStorage.setItem(KEY,JSON.stringify(fol));render()}});
+list.addEventListener("change",e=>{const c=e.target.closest("input[type=checkbox]");if(c){fol[c.dataset.h]=c.checked;try{localStorage.setItem(KEY,JSON.stringify(fol))}catch(e){}render()}});
 render();
 </script>
 </body></html>
